@@ -103,7 +103,7 @@
                                     	<c:forEach items="${slide2}" var="sl2">
 	                                        <div class="slide-it">
 	                                            <div class="movie-item">
-	                                                <div class="mv-img"><img src="<%= request.getContextPath() %>/${sl2.foto}" alt=""></div>
+	                                                <div class="mv-img"><img width="261" height="401" src="<%= request.getContextPath() %>/${sl2.foto}" alt=""></div>
 	                                                <div class="hvr-inner"><a href="#">Read more <i
 	                                                            class="ion-android-arrow-dropright"></i></a></div>
 	                                                <div class="title-in">
