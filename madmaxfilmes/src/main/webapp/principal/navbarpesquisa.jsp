@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <body>
-        <!--preloading-->
+    	<body>
+    <!--preloading-->
         <div id="preloader"><img class="logo" src="<%= request.getContextPath() %>/images/logo1.png" alt="" width="119" height="58">
             <div id="status"><span></span><span></span></div>
         </div>
@@ -27,6 +27,15 @@
                             <li class="btn"><a href="<%= request.getContextPath() %>/ServletPesquisa">Pesquisar</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
-                </nav><!-- search form -->
+                </nav>
+            <!-- top search form -->
+            <div class="top-search">
+	           	<select id = "selectTipo">
+	           		<option value="Filme">Filme</option>
+	           		<option value="Serie">Serie</option>
+	           	</select>
+	           	<input onkeyup="presionar(0)" id="nomeBusca" name="nomeBusca" type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
             </div>
-        </header><!-- END | Header -->
+        </div>
+    </header>
+    <!-- END | Header -->

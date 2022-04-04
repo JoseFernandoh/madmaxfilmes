@@ -74,7 +74,7 @@ public class DAOFilmeRepository {
 	public List<ModelFilme> recentesFilmes() throws Exception{
 		
 		List<ModelFilme> retorno = new ArrayList<>();
-		String sql = "select * from filmes order by id desc limit 3";
+		String sql = "select id,nome,foto,ano,imdb,genero from filmes order by id desc limit 3";
 		
 		ResultSet result = connection.createStatement().executeQuery(sql);
 		
@@ -100,8 +100,8 @@ public class DAOFilmeRepository {
 	public List<ModelFilme> subListasFilme(int opcao) throws Exception{
 		
 		List<ModelFilme> retorno = new ArrayList<>();
-		String sql = opcao == 1 ? "select * from filmes order by ano desc limit 15" 
-								: "select * from filmes order by imdb desc limit 15";
+		String sql = opcao == 1 ? "select id,nome,foto,imdb from filmes order by ano desc limit 15" 
+								: "select id,nome,foto,imdb from filmes order by imdb desc limit 15";
 		
 		ResultSet result = connection.createStatement().executeQuery(sql);
 		
@@ -118,5 +118,95 @@ public class DAOFilmeRepository {
 		
 		return retorno;
 	}
+	
+	public List<ModelFilme> pesquisaIncial() throws Exception{
+		
+		List<ModelFilme> retorno = new ArrayList<>();
+		String sql = "select id,nome,foto,sinopse,ano,imdb from filmes order by ano desc limit 5";
+		
+		ResultSet result = connection.createStatement().executeQuery(sql);
+		
+		while(result.next()) {
+			
+			Long id = result.getLong("id");
+			String nome = result.getString("nome");
+			String foto = result.getString("foto");
+			String sinopse = result.getString("sinopse");
+			int ano = Integer.valueOf(result.getString("ano"));
+			float imdb = Float.valueOf(result.getString("imdb"));
+		
+			retorno.add(new ModelFilme(id, nome, imdb, ano, foto, sinopse));	
+			
+		}
+		
+		return retorno;
+		
+	}
+	
+	public List<ModelFilme> buscarListaNome(String nomeBusca, Integer limit, Integer offset) throws Exception{
+		
+		List<ModelFilme> retorno = new ArrayList<>();
+		String sql = "select id,nome,foto,sinopse,ano,imdb from filmes where upper(nome) like upper(?) order by ano desc offset ? limit ?";
+		
+		PreparedStatement stm = connection.prepareStatement(sql);
+		stm.setString(1, "%" + nomeBusca + "%");
+		stm.setInt(2, offset);
+		stm.setInt(3, limit);
+		
+		ResultSet result = stm.executeQuery();
+		
+		while(result.next()) {
+			
+			Long id = result.getLong("id");
+			String nome = result.getString("nome");
+			String foto = result.getString("foto");
+			String sinopse = result.getString("sinopse");
+			int ano = Integer.valueOf(result.getString("ano"));
+			float imdb = Float.valueOf(result.getString("imdb"));
+		
+			retorno.add(new ModelFilme(id, nome, imdb, ano, foto, sinopse));
+			
+		}
+		
+		return retorno;
+	}
+	
+	public int[] quantidaadePaginas(int items, String nomeBusca) throws Exception {
+
+		String sql = "select count(1) as total from filmes where upper(nome) like upper(?)";
+
+		PreparedStatement stm = connection.prepareStatement(sql);
+		stm.setString(1, "%" + nomeBusca + "%");
+		
+		ResultSet resultado = stm.executeQuery();
+		resultado.next();
+		
+		int totalFilme = Integer.valueOf(resultado.getString("total"));
+		Double pagina = totalFilme / Double.valueOf(items);
+
+		if (pagina % 2 > 0) {
+			pagina++;
+		}
+
+		return new int[] {totalFilme, pagina.intValue()};
+	}
+	
+	public int[] quantidaadePaginas(int items) throws Exception {
+
+		String sql = "select count(1) as total from filmes";
+
+		ResultSet resultado = connection.createStatement().executeQuery(sql);
+		resultado.next();
+		
+		int totalFilme = Integer.valueOf(resultado.getString("total"));
+		Double pagina = totalFilme / Double.valueOf(items);
+
+		if (pagina % 2 > 0) {
+			pagina++;
+		}
+
+		return new int[] {totalFilme, pagina.intValue()};
+	}
+
 	
 }

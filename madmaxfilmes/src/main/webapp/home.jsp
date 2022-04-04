@@ -61,10 +61,10 @@
 	                                        <div class="slide-it">
 	                                            <div class="movie-item">
 	                                                <div class="mv-img"><img src="<%= request.getContextPath() %>/${sl2.foto}" alt=""></div>
-	                                                <div class="hvr-inner"><a href="#">Read more <i
+	                                                <div class="hvr-inner"><a href="<%= request.getContextPath() %>${sl2.linkPagina}">Read more <i
 	                                                            class="ion-android-arrow-dropright"></i></a></div>
 	                                                <div class="title-in">
-	                                                    <h6><a href="#">${sl2.nome}</a></h6>
+	                                                    <h6><a href="<%= request.getContextPath() %>${sl2.linkPagina}">${sl2.nome}</a></h6>
 	                                                    <p><i class="ion-android-star"></i><span>${sl2.imdb}</span>/10</p>
 	                                                </div>
 	                                            </div>
@@ -90,10 +90,10 @@
 	                                        <div class="slide-it">
 	                                            <div class="movie-item">
 	                                                <div class="mv-img"><img src="<%= request.getContextPath() %>/${sl3.foto}" alt=""></div>
-	                                                <div class="hvr-inner"><a href="#">Read more <i
+	                                                <div class="hvr-inner"><a href="<%= request.getContextPath() %>${sl3.linkPagina}">Read more <i
 	                                                            class="ion-android-arrow-dropright"></i></a></div>
 	                                                <div class="title-in">
-	                                                    <h6><a href="#">${sl3.nome}</a></h6>
+	                                                    <h6><a href="<%= request.getContextPath() %>${sl3.linkPagina}">${sl3.nome}</a></h6>
 	                                                    <p><i class="ion-android-star"></i><span>${sl3.imdb}</span>/10</p>
 	                                                </div>
 	                                            </div>

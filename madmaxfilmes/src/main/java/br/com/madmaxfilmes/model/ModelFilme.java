@@ -59,12 +59,24 @@ public class ModelFilme implements Serializable {
 		this.categorias = categorias;
 		this.linkPagina = "/ServletPaginaFilme?id="+id;
 	}
+	
+	
 
 	public ModelFilme(Long id,String nome, Float imdb, String foto) {
 		this.id = id;
 		this.nome = nome;
 		this.imdb = imdb;
 		this.foto = foto;
+		this.linkPagina = "/ServletPaginaFilme?id="+id;
+	}
+	
+	public ModelFilme(Long id, String nome, Float imdb, int ano, String foto, String sinopse) {
+		this.id = id;
+		this.nome =nome;
+		this.imdb = imdb;
+		this.ano = ano;
+		this.foto = foto;
+		this.sinopse = sinopse;
 		this.linkPagina = "/ServletPaginaFilme?id="+id;
 	}
 
