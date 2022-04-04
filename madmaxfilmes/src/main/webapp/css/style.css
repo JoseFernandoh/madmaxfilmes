@@ -4219,6 +4219,10 @@ ul {
     text-transform: uppercase;
 }
 
+.cate .red {
+    background-color: #bb1616;
+}
+
 .cate .blue {
     background-color: #1692bb;
 }

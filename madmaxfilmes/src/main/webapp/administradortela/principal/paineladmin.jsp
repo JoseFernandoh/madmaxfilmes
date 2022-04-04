@@ -1,26 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+
     <!DOCTYPE html>
     <!--[if IE 7]><html class="ie ie7 no-js" lang="en-US"><![endif]-->
     <!--[if IE 8]><html class="ie ie8 no-js" lang="en-US"><![endif]-->
     <!--[if !(IE 7) | !(IE 8)  ]><!-->
     <html lang="en" class="no-js">
 
-    <head>
-        <!-- Basic need -->
-        <title>Open Pediatrics</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <link rel="profile" href="#">
-        <!--Google Font-->
-        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
-        <!-- Mobile specific meta -->
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        <meta name="format-detection" content="telephone-no"><!-- CSS files -->
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/plugins.css">
-        <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
-    </head>
+	<jsp:include page="../../principal/head.jsp"></jsp:include>
 
     <body>
         <!--preloading-->
@@ -89,6 +76,30 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 form-it">
+                                    	<label>Audio: </label>
+                                    	<input name="audio" id="audio" type="text" required>
+                                   </div>
+                                   <div class="col-md-6 form-it">
+                                    	<label>Url Video: </label>
+                                    	<input name="urlvideo" id="urlvideo" type="text" required>
+                                   </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-it">
+                                		<label>Genero: </label>
+                                    	<select id="multselect" name="multselect" multiple>
+	                                    	<c:forEach items="${categorias}" var="cat">
+	                                    		<option value="${cat}">${cat.nome}</option>
+	                                    	</c:forEach>
+                                    	</select>
+                                   </div>
+                                   <div class="col-md-6 form-it">
+                                    	<label>Sinopse: </label>
+                                    	<input name="sinopse" id="sinopse" type="text" required>
+                                   </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-it">
                                     	<label>Foto: </label>
          								<input name="filefoto" id="filefoto" type="file" accept="image/*" required>
                                    </div>
@@ -106,6 +117,11 @@
         <script src="<%= request.getContextPath() %>/js/plugins.js"></script>
         <script src="<%= request.getContextPath() %>/js/plugins2.js"></script>
         <script src="<%= request.getContextPath() %>/js/custom.js"></script>
+       	<script src="<%= request.getContextPath() %>/js/select2.min.js"></script>
+        
+        <script>
+        	$("#multselect").select2();        
+        </script>
     </body>
 
     </html>

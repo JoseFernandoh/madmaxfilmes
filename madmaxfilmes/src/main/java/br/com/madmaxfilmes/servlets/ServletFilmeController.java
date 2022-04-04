@@ -3,11 +3,14 @@ package br.com.madmaxfilmes.servlets;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.tomcat.jakartaee.commons.compress.utils.IOUtils;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
 import br.com.madmaxfilmes.dao.DAOFilmeRepository;
+import br.com.madmaxfilmes.model.ModelCategorias;
 import br.com.madmaxfilmes.model.ModelFilme;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -40,6 +43,10 @@ public class ServletFilmeController extends HttpServlet {
 				
 				String nome = request.getParameter("nome");
 				String time = request.getParameter("tempo");
+				String audio = request.getParameter("audio");
+				String urlVideo = request.getParameter("urlvideo");
+				String sinopse = request.getParameter("sinopse");
+				String[] genero = request.getParameterValues("multselect");
 				int ano = Integer.valueOf(request.getParameter("ano"));
 				float imdb = Float.valueOf(request.getParameter("imdb"));
 				Part part = request.getPart("filefoto");
@@ -49,11 +56,17 @@ public class ServletFilmeController extends HttpServlet {
 				FileOutputStream out = new FileOutputStream(new File(caminho+path));
 				out.write(IOUtils.toByteArray(part.getInputStream()));
 				
-				ModelFilme filme = new ModelFilme(nome,imdb,ano,time,path);
+				List<ModelCategorias> categorias = new ArrayList<>();
+				for (String aux : genero) {
+					categorias.add(ModelCategorias.valueOf(aux));
+				}
+				
+				ModelFilme filme = new ModelFilme(nome,imdb,ano,time,path,sinopse,audio,urlVideo,categorias);
 				
 				daofilme.gravarFilme(filme);
 				
 			}
+				request.setAttribute("categorias", ModelCategorias.values());
 				request.getRequestDispatcher("/administradortela/principal/paineladmin.jsp").forward(request, response);
 			
 		}catch (Exception e) {
