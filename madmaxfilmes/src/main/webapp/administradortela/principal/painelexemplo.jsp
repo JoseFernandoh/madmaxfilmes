@@ -29,12 +29,8 @@
        	<script src="<%= request.getContextPath() %>/js/select2.min.js"></script>
         
         <script>
-        	$("#multselect").select2();  
-        	
-        	function addClass() {
-        		var element = document.getElementById("dadosgerais");
-        		element.classList.add("active");
-        	}
+        	$("#multselect").select2();
+        	$("#delfilme").addClass('active') 
         	
         </script>
     </body>

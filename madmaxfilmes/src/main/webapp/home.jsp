@@ -110,4 +110,6 @@
         
         <jsp:include page="principal/footer.jsp"></jsp:include>
         
+        </body>
+        
     </html>

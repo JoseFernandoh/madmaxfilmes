@@ -38,6 +38,59 @@ public class DAOFilmeRepository {
 		connection.commit();
 	}
 	
+	public void atualizarFilme(ModelFilme filme) throws Exception {
+		String sql = "update filmes set nome=?, imdb=?, ano=?, tempo=?, sinopse=?, audio=?, urlvideo=?, genero=? where id = ?";
+		
+		PreparedStatement stm = connection.prepareStatement(sql);
+		stm.setString(1, filme.getNome());
+		stm.setString(2, filme.getImdb()+"");
+		stm.setString(3, filme.getAno()+"");
+		stm.setString(4, filme.getTime());
+		stm.setString(5, filme.getSinopse());
+		stm.setString(6, filme.getAudio());
+		stm.setString(7, filme.getUrlVideo());
+		stm.setString(8, filme.getCategiraDB());
+		stm.setLong(9, filme.getId());
+		
+		stm.execute();
+		connection.commit();
+		
+	}
+	
+	public void atualizarCapaFilme(Long id, String foto) throws Exception {
+		String sql = "update filmes set foto=? where id = ?";
+		
+		PreparedStatement stm = connection.prepareStatement(sql);
+		stm.setLong(1, id);
+		stm.setString(2, foto);
+		
+		stm.execute();
+		connection.commit();
+		
+	}
+	
+	public String deletarFilme(Long id) throws Exception {
+		String sql = "select foto from filmes where id = ?";
+		
+		PreparedStatement stm = connection.prepareStatement(sql);
+		stm.setLong(1, id);
+		
+		ResultSet result = stm.executeQuery();
+		result.next();
+		String path = result.getString("foto");
+		
+		sql = "delete from filmes where id = ?";
+		
+		stm = connection.prepareStatement(sql);
+		stm.setLong(1, id);
+		
+		stm.execute();
+		connection.commit();
+		
+		return path;
+		
+	}
+		
 	public ModelFilme buscarFilmeId(Long id) throws Exception {
 		
 		ModelFilme filme = null;

@@ -33,7 +33,7 @@ public class ServletPesquisa extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("msg", e.getMessage());
-			request.getRequestDispatcher("erro.jsp").forward(request, response);
+			request.getRequestDispatcher(request.getContextPath()+"/erro.jsp").forward(request, response);
 		}
 	}
 
@@ -69,7 +69,7 @@ public class ServletPesquisa extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("msg", e.getMessage());
-			request.getRequestDispatcher("erro.jsp").forward(request, response);
+			request.getRequestDispatcher(request.getContextPath()+"/erro.jsp").forward(request, response);
 		}
 		
 		

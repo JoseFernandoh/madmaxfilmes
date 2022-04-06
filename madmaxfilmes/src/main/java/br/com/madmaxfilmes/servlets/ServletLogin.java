@@ -44,7 +44,6 @@ public class ServletLogin extends HttpServlet {
 				ModelLogin user = new ModelLogin(login, senha);
 				if (dao.validarAutenticacao(user)) {
 					
-					request.setAttribute("categorias", ModelCategorias.values());
 					request.getSession().setAttribute("usuario", user.getLogin());
 					request.getRequestDispatcher("/administradortela/principal/paineladmin.jsp").forward(request,
 							response);

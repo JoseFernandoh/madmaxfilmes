@@ -36,6 +36,19 @@ public class ModelFilme implements Serializable {
 		this.urlVideo = urlVideo;
 		this.categorias = categorias;
 	}
+	
+	public ModelFilme(Long id, String nome, Float imdb, int ano, String time, String sinopse, String audio,
+			String urlVideo, List<ModelCategorias> categorias) {
+		this.id = id;
+		this.nome = nome;
+		this.imdb = imdb;
+		this.ano = ano;
+		this.time = time;
+		this.sinopse = sinopse;
+		this.audio = audio;
+		this.urlVideo = urlVideo;
+		this.categorias = categorias;
+	}
 
 	public ModelFilme(String nome, Float imdb, int ano, String time, String foto, String sinopse, String audio,
 			String urlVideo, List<ModelCategorias> categorias) {
