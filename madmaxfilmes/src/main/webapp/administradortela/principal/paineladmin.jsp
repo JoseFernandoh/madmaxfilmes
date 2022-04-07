@@ -30,11 +30,7 @@
         
         <script>
         	$("#multselect").select2();  
-        	
-        	function addClass() {
-        		var element = document.getElementById("dadosgerais");
-        		element.classList.add("active");
-        	}
+        	$("#dadosgerais").addClass('active') 
         	
         </script>
     </body>

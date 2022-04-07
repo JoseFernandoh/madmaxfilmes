@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
     
     <jsp:include page="../../principal/head.jsp"></jsp:include>
 
@@ -27,13 +27,15 @@
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="user-information">
                             <div class="user-img"><a href="#"><img src="<%= request.getContextPath() %>/images/uploads/user-img.png"
-                                        alt=""><br></a><a class="redbtn">Nome</a></div>
+                                        alt=""><br></a><a class="redbtn">${usuario}</a></div>
                              <div class="user-fav">
                                 <p>Inicio</p>
                                 <ul>
                                     <li id="dadosgerais"><a href="<%= request.getContextPath() %>/administradortela/principal/paineladmin.jsp">Dados Gerais</a></li>
-                                    <li><a href="userfavoritelist.html">Criar Administrador</a></li>
-                                </ul>
+                                    <c:if test="${admin}">
+                                    	<li id="criaradmin"><a href="<%= request.getContextPath() %>/administradortela/principal/criaruser.jsp">Criar Administrador</a></li>
+                                    </c:if>
+                                </ul>	
                             </div>
                             <div class="user-fav">
                                 <p>Config. Filmes</p>
@@ -46,7 +48,7 @@
                             <div class="user-fav">
                                 <p>Config. Serie</p>
                                 <ul>
-                                    <li><a href="userprofile.html">Cadastrar Serie</a></li>
+                                    <li><a href="<%= request.getContextPath() %>/ServletSerieController?acao=cadserie">Cadastrar Serie</a></li>
                                     <li><a href="userfavoritelist.html">Atualizar Serie</a></li>
                                     <li><a href="userrate.html">Apagar Serie</a></li>
                                 </ul>

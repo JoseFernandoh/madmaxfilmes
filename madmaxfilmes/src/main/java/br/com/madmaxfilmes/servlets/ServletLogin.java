@@ -3,7 +3,6 @@ package br.com.madmaxfilmes.servlets;
 import java.io.IOException;
 
 import br.com.madmaxfilmes.dao.DAOLoginRepository;
-import br.com.madmaxfilmes.model.ModelCategorias;
 import br.com.madmaxfilmes.model.ModelLogin;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -45,6 +44,7 @@ public class ServletLogin extends HttpServlet {
 				if (dao.validarAutenticacao(user)) {
 					
 					request.getSession().setAttribute("usuario", user.getLogin());
+					request.getSession().setAttribute("admin", dao.validarAdmin(user.getLogin()));
 					request.getRequestDispatcher("/administradortela/principal/paineladmin.jsp").forward(request,
 							response);
 				} else {

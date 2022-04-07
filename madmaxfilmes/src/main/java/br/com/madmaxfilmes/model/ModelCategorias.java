@@ -1,6 +1,6 @@
 package br.com.madmaxfilmes.model;
 
-public enum ModelCategorias {
+public enum ModelCategorias{
 	
 	ACAO("Açao" , "yell"),
 	AVENTURA("Aventura", "orange"),

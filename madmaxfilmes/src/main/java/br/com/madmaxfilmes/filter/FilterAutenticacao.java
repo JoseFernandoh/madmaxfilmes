@@ -16,7 +16,7 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;;
 
-@WebFilter( urlPatterns = {"/ServletFilmeController","/administradortela/principal/*","/administradortela/*"})
+@WebFilter( urlPatterns = {"/ServletFilmeController","/administradortela/principal/*","/administradortela/*","/ServletUserController"})
 public class FilterAutenticacao implements Filter {
 	
 	private static Connection connection;

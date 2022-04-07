@@ -15,14 +15,14 @@
                         <div class="form-style-1 user-pro">
                                <h4>Deletar Filme</h4>
                                <div class="row">
-                                <div class="col-xs-12 .col-md-8">
-	                               	<div class="top-search">
-										<input onkeyup="presionar(0)" id="nomeBusca" type="text"
+                                	<div class="col-xs-12 .col-md-8">
+	                               		<div class="top-search">
+											<input onkeyup="presionar(0)" id="nomeBusca" type="text"
 											placeholder="Pesquisar Por Nome" aria-label="Recipient's username"
 											aria-describedby="basic-addon2">
+										</div>
 									</div>
 								</div>
-							</div>
 							<div style="padding-top: 5%;" id="tratarFilmeAjax">
 								<div id="divdadosFilme">
 									
@@ -85,21 +85,25 @@
    					    		'</div>');
    		   					}
    		 					
-   		 					$('#tratarFilmeAjax').append('<div id="topdarfilter" class="topbar-filter">'+
-			                    	'<label id="totalFilmes"></label>'+
-				                    '<div class="pagination2">'+
-                        				'<span>Page 1 of 2:</span>'+
-                        				'<a class="active" href="#">1</a>'+
-                        				'<a href="#">2</a>'+
-                        				'<a onclick="#">'+
-                        					'<i class="ion-arrow-right-b"></i>'+
-                        				'</a>'+
-                        			'</div>'+
-			                    '</div>');
-   		 					
    		 					var totalFilme = xhr.getResponseHeader("totalFilme");
-
-   		 					document.getElementById("totalFilmes").textContent = "Quantidade de Filmes: " + totalFilme;
+   		 					
+   		 					if(totalFilme > 0){
+	   		 					$('#tratarFilmeAjax').append('<div id="topdarfilter" class="topbar-filter">'+
+				                    	'<label id="totalFilmes"></label>'+
+					                    '<div class="pagination2">'+
+	                        				'<span>Page 1 of 2:</span>'+
+	                        				'<a class="active" href="#">1</a>'+
+	                        				'<a href="#">2</a>'+
+	                        				'<a onclick="#">'+
+	                        					'<i class="ion-arrow-right-b"></i>'+
+	                        				'</a>'+
+	                        			'</div>'+
+				                    '</div>');
+	   		 					
+	
+	   		 					document.getElementById("totalFilmes").textContent = "Quantidade de Filmes: " + totalFilme;
+   		 					}
+   		 					
    						}
    		 				
    		 			}).fail(function(xhr, status, errorThrown) {
