@@ -98,6 +98,7 @@ public class ServletFilmeController extends HttpServlet {
 				String[] genero = request.getParameterValues("multselect");
 				int ano = Integer.valueOf(request.getParameter("ano"));
 				float imdb = Float.valueOf(request.getParameter("imdb"));
+				Part part = request.getPart("filefoto");
 				
 				List<ModelCategorias> categorias = new ArrayList<>();
 				for (String aux : genero) {
@@ -108,12 +109,13 @@ public class ServletFilmeController extends HttpServlet {
 				
 				daofilme.atualizarFilme(filme);
 				
-				if(ServletFileUpload.isMultipartContent(request)) {
+				if(part.getSize() > 0) {
 					
-					Part part = request.getPart("filefoto");
 					String path = "images/capas/" + nome.replaceAll(" ", "") + time + ano + ".jpg";
 					FileOutputStream out = new FileOutputStream(new File(caminho+path));
 					out.write(IOUtils.toByteArray(part.getInputStream()));
+					
+					daofilme.atualizarCapaFilme(id, path);
 					
 				}
 				

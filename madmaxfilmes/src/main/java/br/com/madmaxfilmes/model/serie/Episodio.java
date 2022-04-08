@@ -10,6 +10,11 @@ public class Episodio implements Serializable {
 	private String nome;
 	private String urlVideo;
 	
+	public Episodio(Long id, String nome, String urlVideo) {
+		this.id = id;
+		this.nome = nome;
+		this.urlVideo = urlVideo;
+	}
 	
 	public Long getId() {
 		return id;

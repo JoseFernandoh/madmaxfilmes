@@ -79,7 +79,7 @@
 		 			$.ajax({
 		 				method: "post",
 		 				url: urlAction,
-		 				data: "nomeBusca=" + nomeBusca + "&tipo=" + tipo + "&items=" + items + "&offset="+ offset +"&acao=buscarFilme",
+		 				data: "nomeBusca=" + nomeBusca + "&tipo=" + tipo + "&items=" + items + "&offset="+ offset +"&acao=buscar",
 		 				success: function(response, textStatus, xhr) {
 		 					
 		 					var json = JSON.parse(response);

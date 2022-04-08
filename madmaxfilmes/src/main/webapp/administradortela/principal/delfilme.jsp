@@ -33,11 +33,8 @@
                 </div>
             </div>
         </div>
-        <script src="<%= request.getContextPath() %>/js/jquery.js"></script>
-        <script src="<%= request.getContextPath() %>/js/plugins.js"></script>
-        <script src="<%= request.getContextPath() %>/js/plugins2.js"></script>
-        <script src="<%= request.getContextPath() %>/js/custom.js"></script>
-       	<script src="<%= request.getContextPath() %>/js/select2.min.js"></script>
+        
+        <jsp:include page="js.jsp"></jsp:include>
         
         <script>
     	    
@@ -58,7 +55,7 @@
    		 			$.ajax({
    		 				method: "post",
    		 				url: urlAction,
-   		 				data: "nomeBusca=" + nomeBusca + "&tipo=" + tipo + "&items=" + items + "&offset="+ offset +"&acao=buscarFilme",
+   		 				data: "nomeBusca=" + nomeBusca + "&tipo=" + tipo + "&items=" + items + "&offset="+ offset +"&acao=buscar",
    		 				success: function(response, textStatus, xhr) {
    		 					
    		 					var json = JSON.parse(response);

@@ -61,8 +61,8 @@ public class DAOFilmeRepository {
 		String sql = "update filmes set foto=? where id = ?";
 		
 		PreparedStatement stm = connection.prepareStatement(sql);
-		stm.setLong(1, id);
-		stm.setString(2, foto);
+		stm.setString(1, foto);
+		stm.setLong(2, id);
 		
 		stm.execute();
 		connection.commit();

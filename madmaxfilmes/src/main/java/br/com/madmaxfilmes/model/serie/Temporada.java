@@ -12,7 +12,11 @@ public class Temporada implements Serializable {
 	private String nome;
 	private List<Episodio> episodios = new ArrayList<>();
 	
-	
+	public Temporada(Long id, String nome, List<Episodio> episodios) {
+		this.id = id;
+		this.nome = nome;
+		this.episodios = episodios;
+	}
 	
 	public Long getId() {
 		return id;

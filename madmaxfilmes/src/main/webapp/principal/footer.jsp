@@ -62,7 +62,7 @@
         <script src="<%= request.getContextPath() %>/js/plugins2.js"></script>
         <script src="<%= request.getContextPath() %>/js/custom.js"></script>
         <script src="<%= request.getContextPath() %>/js/select2.min.js"></script>
-        
+        <script src="<%= request.getContextPath() %>/js/bootstrap.min.js"></script>
 
         
     

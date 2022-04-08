@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.madmaxfilmes.dao.DAOFilmeRepository;
+import br.com.madmaxfilmes.dao.DAOSerieRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,6 +17,7 @@ public class ServletPesquisa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private DAOFilmeRepository daofilme = new DAOFilmeRepository();
+	private DAOSerieRepository daoserie = new DAOSerieRepository();
 
     public ServletPesquisa() {
     
@@ -43,22 +45,30 @@ public class ServletPesquisa extends HttpServlet {
 			
 			String acao = request.getParameter("acao");
 						
-			if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscarFilme")){
+			if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscar")){
 				
 				String nome = request.getParameter("nomeBusca");
 				String tipo = request.getParameter("tipo");
 				Integer items = Integer.valueOf(request.getParameter("items"));
 				Integer offset = Integer.valueOf(request.getParameter("offset"));
+				ObjectMapper mapper = new ObjectMapper();
 								
 				if(tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Filme")) {
 					
 					int[] dados = daofilme.quantidaadePaginas(items, nome);
 					
-					ObjectMapper mapper = new ObjectMapper();
 					String json = mapper.writeValueAsString(daofilme.buscarListaNome(nome, items, offset));
 					
 					
 					response.addHeader("totalFilme", ""+dados[0]);
+					response.addHeader("paginas", ""+dados[1]);
+					response.getWriter().write(json);
+				}else if (tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Serie")) {
+					int[] dados = daoserie.quantidaadePaginas(items, nome);
+					
+					String json = mapper.writeValueAsString(daoserie.buscarListaNome(nome, items, offset));
+					
+					response.addHeader("totalSerie", ""+dados[0]);
 					response.addHeader("paginas", ""+dados[1]);
 					response.getWriter().write(json);
 				}

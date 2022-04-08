@@ -48,8 +48,8 @@
                             <div class="user-fav">
                                 <p>Config. Serie</p>
                                 <ul>
-                                    <li><a href="<%= request.getContextPath() %>/ServletSerieController?acao=cadserie">Cadastrar Serie</a></li>
-                                    <li><a href="userfavoritelist.html">Atualizar Serie</a></li>
+                                    <li id="cadserie"><a href="<%= request.getContextPath() %>/ServletSerieController?acao=cadserie">Cadastrar Serie</a></li>
+                                    <li id="atuserie"><a href="<%= request.getContextPath() %>/ServletSerieController?acao=atuserie">Atualizar Serie</a></li>
                                     <li><a href="userrate.html">Apagar Serie</a></li>
                                 </ul>
                             </div>
