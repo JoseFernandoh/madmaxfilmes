@@ -14,6 +14,7 @@
                         <div class="form-style-1 user-pro">
                             <form action="<%= request.getContextPath() %>/ServletFilmeController" enctype="multipart/form-data" class="user" id="formUser" method="post">
                                 <h4>Cadastrar Novo Filme</h4>
+                                <p>${msg}</p>
                                 <input type="hidden" name="acao" id="acao" value="cadastrarfilme">
                                 <div class="row">
                                     <div class="col-md-6 form-it">

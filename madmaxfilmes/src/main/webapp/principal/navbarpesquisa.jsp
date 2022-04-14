@@ -31,6 +31,7 @@
             <!-- top search form -->
             <div class="top-search">
 	           	<select id = "selectTipo">
+	           		<option value="Todos">Todos</option>
 	           		<option value="Filme">Filme</option>
 	           		<option value="Serie">Serie</option>
 	           	</select>

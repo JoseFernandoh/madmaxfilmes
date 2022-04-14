@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.madmaxfilmes.dao.DAOFilmeRepository;
+import br.com.madmaxfilmes.dao.DAOMediaRepository;
 import br.com.madmaxfilmes.dao.DAOSerieRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -18,6 +19,7 @@ public class ServletPesquisa extends HttpServlet {
 	
 	private DAOFilmeRepository daofilme = new DAOFilmeRepository();
 	private DAOSerieRepository daoserie = new DAOSerieRepository();
+	private DAOMediaRepository daopesquisa = new DAOMediaRepository();
 
     public ServletPesquisa() {
     
@@ -26,11 +28,11 @@ public class ServletPesquisa extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			
-			int[] dados = daofilme.quantidaadePaginas(5);
-			
-			request.setAttribute("totalFilme", dados[0]);
+			int[] dados = daopesquisa.quantidaadePaginasAll(5);
+
+			request.setAttribute("total", dados[0]);
 			request.setAttribute("paginas", dados[1]);
-			request.setAttribute("listaFilme", daofilme.pesquisaIncial());
+			request.setAttribute("lista", daopesquisa.buscaInicial());
 			request.getRequestDispatcher("/principal/pesquisa.jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -60,7 +62,7 @@ public class ServletPesquisa extends HttpServlet {
 					String json = mapper.writeValueAsString(daofilme.buscarListaNome(nome, items, offset));
 					
 					
-					response.addHeader("totalFilme", ""+dados[0]);
+					response.addHeader("total", ""+dados[0]);
 					response.addHeader("paginas", ""+dados[1]);
 					response.getWriter().write(json);
 				}else if (tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Serie")) {
@@ -68,9 +70,20 @@ public class ServletPesquisa extends HttpServlet {
 					
 					String json = mapper.writeValueAsString(daoserie.buscarListaNome(nome, items, offset));
 					
-					response.addHeader("totalSerie", ""+dados[0]);
+					response.addHeader("total", ""+dados[0]);
 					response.addHeader("paginas", ""+dados[1]);
 					response.getWriter().write(json);
+				
+				}else if (tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Todos")) {
+					
+					int[] dados = daopesquisa.quantidaadePaginasAll(items, nome);
+					
+					String json = mapper.writeValueAsString(daopesquisa.buscarListaNome(nome, items, offset));
+					
+					response.addHeader("total", ""+dados[0]);
+					response.addHeader("paginas", ""+dados[1]);
+					response.getWriter().write(json);
+					
 				}
 				
 			}

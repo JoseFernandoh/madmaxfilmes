@@ -9,7 +9,6 @@ public class ModelFilme extends ModelMidea implements Serializable {
 
 	
 	private String urlVideo;
-	private String linkPagina;
 	
 	
 	
@@ -34,19 +33,17 @@ public class ModelFilme extends ModelMidea implements Serializable {
 
 	public ModelFilme(Long id,String nome, Float imdb, int ano, String foto, List<ModelCategorias> categorias) {
 		super(id,nome,imdb,ano,foto,categorias);
-		this.linkPagina = "/ServletPaginaFilme?id="+id;
+		super.setLinkPagina("/ServletPaginaFilme?id="+id);
 	}
 	
-	
-
 	public ModelFilme(Long id,String nome, Float imdb, String foto) {
 		super(id,nome,imdb,foto);
-		this.linkPagina = "/ServletPaginaFilme?id="+id;
+		super.setLinkPagina("/ServletPaginaFilme?id="+id);
 	}
 	
 	public ModelFilme(Long id, String nome, Float imdb, int ano, String foto, String sinopse) {
 		super(id,nome,imdb,ano,foto,sinopse);
-		this.linkPagina = "/ServletPaginaFilme?id="+id;
+		super.setLinkPagina("/ServletPaginaFilme?id="+id);
 	}
 
 	public String getUrlVideo() {
@@ -55,9 +52,5 @@ public class ModelFilme extends ModelMidea implements Serializable {
 
 	public void setUrlVideo(String urlVideo) {
 		this.urlVideo = urlVideo;
-	}
-	
-	public String getLinkPagina() {
-		return linkPagina;
 	}
 }

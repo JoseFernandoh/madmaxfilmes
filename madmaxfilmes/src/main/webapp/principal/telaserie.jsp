@@ -16,7 +16,7 @@
             <div class="row ipad-width2">
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="movie-img sticky-sb">
-                    	<img width="330px" height="505px" src="<%= request.getContextPath() %>/images/capas/Interstellar1h212020.jpg" alt="">
+                    	<img width="330px" height="505px" src="<%= request.getContextPath() %>/${serie.foto}" alt="">
                     </div>	
                 </div>
                 <div style="background-color: #0b1a2a; border: 3px solid #0f2133; padding-top: 15px;"  class="col-md-8 col-sm-12 col-xs-12">
@@ -24,7 +24,7 @@
                         <div class="row">
 	                		<div class="col-md-8 col-sm-12 col-xs-12">
 	                    		<div class="movie-single-ct main-content">
-	                        		<h1 class="bd-hd">Interstellar<span>2020</span></h1>
+	                        		<h1 class="bd-hd">${serie.nome}<span>${serie.ano}</span></h1>
 	                    		</div>
 	                		</div>
 	                	</div>
@@ -38,7 +38,7 @@
 	                        	<p>
 	                        		<i style="color: #f5b50a; font-size: 22px;" class="ion-android-star">
 	                        		</i>
-	                        		<span style="font-weight: 400; font-size: 18px;">7.0
+	                        		<span style="font-weight: 400; font-size: 18px;">${serie.imdb}
 	                        		</span>/10
 	                        	</p>
                             </div>
@@ -52,12 +52,11 @@
                             <div class="col-md-5">
                                 <div class="title-in">
                                     <div class="cate">
-	                                        <span class="blue">
-	                                            <a>Aventuda</a>
+	                                 	 <c:forEach items="${serie.categorias}" var="cat">
+	                                        <span class="${cat.cor}">
+	                                            <a>${cat.nome}</a>
 	                                        </span>
-	                                        <span class="red">
-	                                            <a>Ação</a>
-	                                        </span>
+                                        </c:forEach>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +67,7 @@
                                     <h6 style="color: white">Audio: </h6>
                                 </div>
                                 <div class="col-md-5">
-                                    <h6 style="color: white">Portugues</h6>
+                                    <h6 style="color: white">${serie.audio}</h6>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +77,7 @@
                                     <h6 style="color: white">Duração: </h6>
                                 </div>
                                 <div class="col-md-5">
-                                    <h6 style="color: white">1h40</h6>
+                                    <h6 style="color: white">${serie.time}</h6>
                                 </div>
                             </div>
                         </div>
@@ -88,11 +87,7 @@
                                     <h6 style="color: white">Sinopse: </h6>
                                 </div>
                                 <div class="col-md-8">
-                                    <p style="color: white">A expressão
-									Lorem ipsum em design gráfico e editoração é um texto padrão em
-									latim utilizado na produção gráfica para preencher os espaços
-									de texto em publicações para testar e ajustar aspectos visuais
-									antes de utilizar conteúdo rea</p>
+                                    <p style="color: white">${serie.sinopse}</p>
                                 </div>
                             </div>
                         </div>
@@ -102,13 +97,10 @@
                                     <h6 style="color: white">Temporada: </h6>
                                 </div>
                                 <div class="col-md-5">
-                                    <select style="background-color: #0f2133; border: none; color: white;" id="selectTemporada">
-                                    	<option value="1"> 1º Temporada </option>
-                                    	<option value="2"> 2º Temporada </option>
-                                    	<option value="3"> 3º Temporada </option>
-                                    	<option value="4"> 4º Temporada </option>
-                                    	<option value="5"> 5º Temporada </option>
-                                    	<option value="6"> 6º Temporada </option>
+                                    <select onchange="selTemporada()" style="background-color: #0f2133; border: none; color: white;" id="selectTemporada">
+                                    	<c:forEach var="i" begin="0" end="${serie.temporadas.size()-1}" step="1">
+                                    		<option value="${i}"> ${serie.temporadas[i].nome}ª Temporada </option>
+                                    	</c:forEach>
                                     </select>
                                 </div>
                             </div>
@@ -121,7 +113,7 @@
     <div class="page-single">
         <div class="container">
             <div style=" height: 640px;">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WbXy0-UlCAc"
+                <iframe id="videoUrl" width="100%" height="100%" src="${serie.temporadas[0].episodios[0].urlVideo}"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
@@ -132,20 +124,17 @@
         	<div class="form-style-1 user-pro">
         		<div style="margin-bottom: 0px; border: none;" class="topbar-filter">
         			<div class="col-md-3">
-                    	<input type="button" class="submit" data-toggle="modal" data-target="#pesquisafilme" value="Anterior">
+                    	<input onclick="anteriosEpisodio()" type="button" class="submit" value="Anterior">
                     </div>
                     <div class="col-md-5">
-	                   	<select style="background-color: #0f2133; border: none; color: white; width: 100%; text-align: center;" id="selectTemporada">
-                           	<option value="1"> 1º Episodio </option>
-                           	<option value="2"> 2º Episodio </option>
-                           	<option value="3"> 3º Episodio </option>
-                           	<option value="4"> 4º Episodio </option>
-                           	<option value="5"> 5º Episodio </option>
-                           	<option value="6"> 6º Episodio </option>
+	                   	<select onchange="selEpisodio()" style="background-color: #0f2133; border: none; color: white; width: 100%; text-align: center;" id="selectEpisodio">
+                           	<c:forEach var="i" begin="0" end="${serie.temporadas[0].episodios.size() - 1}" step="1">
+                                  <option value="${i}"> ${serie.temporadas[0].episodios[i].nome}ª Episodio </option>
+                            </c:forEach>
                     	</select>
                     </div>
                     <div class="col-md-3">
-                    	<input type="button" class="submit" data-toggle="modal" data-target="#pesquisafilme" value="Proximo">
+                    	<input onclick="proximoEpisodio()" type="button" class="submit" value="Proximo">
                     </div>
         		</div>
         	</div>
@@ -153,6 +142,69 @@
     </div>
 	
 	<jsp:include page="footer.jsp"></jsp:include>
+	
+	<script type="text/javascript">
+		var posicao = $('#selectEpisodio').val();
+		var posicaoTemporada = $('#selectTemporada').val();
+		var temporada = ${temporada};
+		
+		function proximoEpisodio() {
+			
+			posicao++;
+			
+			if(posicao < temporada[posicaoTemporada].episodios.length){
+				$('#selectEpisodio').val(posicao);
+			}else{
+				posicaoTemporada++;
+				if(posicaoTemporada < temporada.length){
+					$('#selectTemporada').val((posicaoTemporada));
+					ajeitarEpisodio();
+					posicao = $('#selectEpisodio').val();
+				}else{
+					posicao--;
+					posicaoTemporada--;
+				}
+			}
+				$("#videoUrl").attr("src", temporada[posicaoTemporada].episodios[posicao].urlVideo);
+		}
+		
+		function anteriosEpisodio() {
+			
+			if(posicao != 0){
+				posicao--;
+				$('#selectEpisodio').val(posicao);
+			}else{
+				if(posicaoTemporada != 0){
+					posicaoTemporada--;
+					$('#selectTemporada').val((posicaoTemporada));
+					ajeitarEpisodio()
+					posicao = (temporada[posicaoTemporada].episodios.length - 1);
+					$('#selectEpisodio').val(posicao);
+				}
+			}
+			
+			$("#videoUrl").attr("src", temporada[posicaoTemporada].episodios[posicao].urlVideo);
+		}
+		
+		function selTemporada() {
+			posicaoTemporada = $('#selectTemporada').val();
+			ajeitarEpisodio();
+			selEpisodio()
+		}
+		
+		function selEpisodio() {
+			posicao = $('#selectEpisodio').val();
+			$("#videoUrl").attr("src", temporada[posicaoTemporada].episodios[posicao].urlVideo);
+		}
+		
+		function ajeitarEpisodio() {
+			$('#selectEpisodio > option').remove();
+			for(var i = 0; i < temporada[posicaoTemporada].episodios.length; i++){
+				$('#selectEpisodio').append('<option value="'+i+'"> '+temporada[posicaoTemporada].episodios[i].nome+'ª Episodio </option>');
+			}
+		}
+		
+	</script>
 	
 	</body>
 

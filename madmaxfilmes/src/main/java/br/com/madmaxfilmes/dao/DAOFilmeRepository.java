@@ -150,7 +150,7 @@ public class DAOFilmeRepository {
 		return retorno;
 	}
 	
-	public List<ModelFilme> subListasFilme(int opcao) throws Exception{
+	public List<ModelFilme> subListas(int opcao) throws Exception{
 		
 		List<ModelFilme> retorno = new ArrayList<>();
 		String sql = opcao == 1 ? "select id,nome,foto,imdb from filmes order by ano desc limit 15" 

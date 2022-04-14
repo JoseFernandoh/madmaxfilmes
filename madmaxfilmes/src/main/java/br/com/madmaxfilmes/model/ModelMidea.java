@@ -16,6 +16,7 @@ public class ModelMidea implements Serializable {
 	protected String foto;
 	protected String sinopse;
 	protected String audio;
+	private String linkPagina;
 	protected List<ModelCategorias> categorias = new ArrayList<>();
 
 	public ModelMidea() {
@@ -164,4 +165,10 @@ public class ModelMidea implements Serializable {
 		return aux.strip();
 	}
 
+	public String getLinkPagina() {
+		return linkPagina;
+	}
+	public void setLinkPagina(String linkPagina) {
+		this.linkPagina = linkPagina;
+	}
 }

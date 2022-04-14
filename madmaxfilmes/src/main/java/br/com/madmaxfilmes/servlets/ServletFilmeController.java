@@ -85,6 +85,7 @@ public class ServletFilmeController extends HttpServlet {
 				}
 				
 				request.setAttribute("categorias", ModelCategorias.values());
+				request.setAttribute("msg", " Filme Cadastrado com Sucesso");
 				request.getRequestDispatcher("/administradortela/principal/cadfilmes.jsp").forward(request, response);
 				
 			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("atualizarfilme")) {

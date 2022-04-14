@@ -11,7 +11,7 @@ public class ModelSerie extends ModelMidea implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private List<Temporada> temporadas = new ArrayList<>();
-	private String linkPagina;
+	
 	
 	
 	public ModelSerie(String nome, float imdb, int ano, String time, String path, String sinopse, String audio,
@@ -30,18 +30,29 @@ public class ModelSerie extends ModelMidea implements Serializable {
 		super(id,nome,imdb,ano,time,sinopse,audio,categorias);
 	}
 
+	public ModelSerie(Long id, String nome, Float imdb, int ano, String foto, String sinopse) {
+		super(id,nome,imdb,ano,foto,sinopse);
+		super.setLinkPagina("/ServletPaginaSerie?id="+id);
+	}
+	
+	public ModelSerie(Long id,String nome, Float imdb, String foto) {
+		super(id,nome,imdb,foto);
+		super.setLinkPagina("/ServletPaginaSerie?id="+id);
+	}
+	
+	public ModelSerie(Long id,String nome, Float imdb, int ano, String foto, List<ModelCategorias> categorias) {
+		super(id,nome,imdb,ano,foto,categorias);
+		super.setLinkPagina("/ServletPaginaSerie?id="+id);
+	}
+
+
 	public List<Temporada> getTemporadas() {
 		return temporadas;
 	}
 	public void setTemporadas(List<Temporada> temporadas) {
 		this.temporadas = temporadas;
 	}
-	public String getLinkPagina() {
-		return linkPagina;
-	}
-	public void setLinkPagina(String linkPagina) {
-		this.linkPagina = linkPagina;
-	}
+
 	
 	
 	

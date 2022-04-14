@@ -243,6 +243,28 @@ public class DAOSerieRepository {
 		return retorno;
 	}
 	
+	public List<ModelSerie> subListas(int opcao) throws Exception{
+		
+		List<ModelSerie> retorno = new ArrayList<>();
+		String sql = opcao == 1 ? "select id,nome,foto,imdb from serie order by ano desc limit 15" 
+								: "select id,nome,foto,imdb from serie order by imdb desc limit 15";
+		
+		ResultSet result = connection.createStatement().executeQuery(sql);
+		
+		while(result.next()) {
+			
+			Long id = result.getLong("id");
+			String nome = result.getString("nome");
+			String foto = result.getString("foto");
+			float imdb = Float.valueOf(result.getString("imdb"));
+			
+			retorno.add(new ModelSerie(id, nome, imdb, foto));
+			
+		}
+		
+		return retorno;
+	}
+	
 	public int[] quantidaadePaginas(int items, String nomeBusca) throws Exception {
 
 		String sql = "select count(1) as total from serie where upper(nome) like upper(?)";

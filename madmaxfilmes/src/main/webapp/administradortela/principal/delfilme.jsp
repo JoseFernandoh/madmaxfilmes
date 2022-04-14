@@ -14,6 +14,7 @@
     				<div class="col-md-9 col-sm-12 col-xs-12">
                         <div class="form-style-1 user-pro">
                                <h4>Deletar Filme</h4>
+                               <p id="msg">${msg}</p>
                                <div class="row">
                                 	<div class="col-xs-12 .col-md-8">
 	                               		<div class="top-search">
@@ -119,6 +120,7 @@
 			 			data: "id=" + id +"&acao=deletarfilmeid",
 			 			success: function(response) {
 			 					
+			 				document.getElementById("msg").textContent = "Filme Apagado com sucesso"
 			 				buscarUsuario(0);
 			 	       		
 						}

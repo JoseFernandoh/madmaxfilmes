@@ -18,11 +18,11 @@
             <div class="row ipad-width2">
                 <div class="col-md-10 col-sm-12 col-xs-12">
                     <div class="topbar-filter">
-                        <p>Found <span id="nomeFilme">${totalFilme} movies</span> in total</p>
+                        <p>Found <span id="total">${total} movies</span> in total</p>
                     </div>
                     <div id="tratarFilmeAjax">
 	                    <div id="divdadosFilme">
-		                    <c:forEach items="${listaFilme}" var="lf">
+		                    <c:forEach items="${lista}" var="lf">
 			                    <div id="divisor1" class="movie-item-style-2">
 			                    	<img style=" width: 170px;height: 261px;" src="<%= request.getContextPath() %>/${lf.foto}" alt="">
 			                        <div id="divisor2" class="mv-item-infor">
@@ -42,13 +42,12 @@
                     	</select>
                         <div class="pagination2">
                         	<span>Page 1 of ${paginas}:</span>
-                        	<a class="active" href="#">1</a>
+                        	<a class="active" onclick="paginar(0)">1</a>
                         	<%
                         		int paginas = (int) request.getAttribute("paginas");
                         		
                         		for(int i = 1; i < paginas; i++){
-                        			String url = request.getContextPath() + "#";
-                        			out.write("<a href=\"#\">" + (i+1) + "</a>");
+                        			out.write("<a onclick=\"paginar("+ (i*5) +")\">" + (i+1) + "</a>");
                         		}
                         	%>
                         	<a onclick="#">
@@ -75,37 +74,41 @@
 		 		var tipo = $('#selectTipo').val();
 		 		var items = $('#selectitem').val();
 		 		
-		 		if(nomeBusca != null & nomeBusca != '' & nomeBusca.trim() != ''){
-		 			$.ajax({
-		 				method: "post",
-		 				url: urlAction,
-		 				data: "nomeBusca=" + nomeBusca + "&tipo=" + tipo + "&items=" + items + "&offset="+ offset +"&acao=buscar",
-		 				success: function(response, textStatus, xhr) {
-		 					
-		 					var json = JSON.parse(response);
-		 					
-		 					var el = document.getElementById( 'divdadosFilme' ).remove();
-		 					$("#tratarFilmeAjax").append('<div id="divdadosFilme"></div>');
-		 					
-		 					for(var p = 0; p < json.length; p++){
-		 						
-		   						$('#divdadosFilme').append('<div id="divisor'+p+'" class="movie-item-style-2"></div>');
-		   						$('#divisor'+p+'').append('<img style=" width: 170px;height: 261px;" src="'+url+'/'+json[p].foto+'">');
-		   						$('#divisor'+p+'').append('<div id="subdivisor'+p+'" class="mv-item-infor"></div>');
-		   						$('#subdivisor'+p+'').append('<h6><a href="'+url+json[p].linkPagina+'">'+json[p].nome+'<span>('+json[p].ano+')</span></a></h6>');
-		   						$('#subdivisor'+p+'').append('<p class="rate"><i class="ion-android-star"></i><span>'+json[p].imdb+'</span>/10</p>');
-		   						$('#subdivisor'+p+'').append('<p class="describe">'+json[p].sinopse+'</p>');
-		   					}
-		 					
-		 					var totalFilme = xhr.getResponseHeader("totalFilme");
+	 			$.ajax({
+	 				method: "post",
+	 				url: urlAction,
+	 				data: "nomeBusca=" + nomeBusca + "&tipo=" + tipo + "&items=" + items + "&offset="+ offset +"&acao=buscar",
+	 				success: function(response, textStatus, xhr) {
+	 					
+	 					var json = JSON.parse(response);
+	 					
+	 					var el = document.getElementById( 'divdadosFilme' ).remove();
+	 					$("#tratarFilmeAjax").append('<div id="divdadosFilme"></div>');
+	 					
+	 					for(var p = 0; p < json.length; p++){
+	 						
+	   						$('#divdadosFilme').append('<div id="divisor'+p+'" class="movie-item-style-2"></div>');
+	   						$('#divisor'+p+'').append('<img style=" width: 170px;height: 261px;" src="'+url+'/'+json[p].foto+'">');
+	   						$('#divisor'+p+'').append('<div id="subdivisor'+p+'" class="mv-item-infor"></div>');
+	   						$('#subdivisor'+p+'').append('<h6><a href="'+url+json[p].linkPagina+'">'+json[p].nome+'<span>('+json[p].ano+')</span></a></h6>');
+	   						$('#subdivisor'+p+'').append('<p class="rate"><i class="ion-android-star"></i><span>'+json[p].imdb+'</span>/10</p>');
+	   						$('#subdivisor'+p+'').append('<p class="describe">'+json[p].sinopse+'</p>');
+	   					}
+	 					
+	 					var total = xhr.getResponseHeader("total");
 
-		 					document.getElementById("nomeFilme").textContent = totalFilme + " movies";
-						}
-		 				
-		 			}).fail(function(xhr, status, errorThrown) {
-						alert("Erro ao Buscar Usuario por Nome"+ xhr.responseText);
-					});
-		 		}
+	 					document.getElementById("total").textContent = total + " movies";
+					}
+	 				
+	 			}).fail(function(xhr, status, errorThrown) {
+					alert("Erro ao Buscar Usuario por Nome"+ xhr.responseText);
+				
+	 			});
+		 		
+			}
+		  
+		   function paginar(offset) {
+			   buscarUsuario(offset)
 			}
 		  
 		  	function presionar(offset){
