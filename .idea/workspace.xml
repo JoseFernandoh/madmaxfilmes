@@ -4,328 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c12185e6-2019-4704-9183-5801d7ee9f0d" name="Changes" comment="">
+    <list default="true" id="c12185e6-2019-4704-9183-5801d7ee9f0d" name="Changes" comment="Correçao de Bugs e adcionamento da paginação de pesquisas">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/img/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/madmaxfilmes/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/madmaxfilmes/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/.jsdtscope" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/org.eclipse.wst.jsdt.ui.superType.container" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/org.eclipse.wst.jsdt.ui.superType.name" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/org.eclipse.wst.validation.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.validation.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/madmaxfilmes/home/deku/Documentos/JAVA/Eclipse Web/madmaxfilmes/target/m2e-wtp/web-resources/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/home/deku/Documentos/JAVA/Eclipse Web/madmaxfilmes/target/m2e-wtp/web-resources/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/connection/SingleConnectionBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/connection/SingleConnectionBanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/dao/DAOFilmeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOFilmeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/dao/DAOLoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOLoginRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/dao/DAOMediaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOMediaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/dao/DAOSerieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOSerieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/filter/FilterAutenticacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/filter/FilterAutenticacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/model/ModelCategorias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/model/ModelCategorias.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/model/ModelFilme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/model/ModelFilme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/model/ModelLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/model/ModelLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/model/ModelMidea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/model/ModelMidea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/model/ModelSerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/model/ModelSerie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/model/serie/Episodio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/model/serie/Episodio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/model/serie/Temporada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/model/serie/Temporada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletFilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletFilmeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaFilme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaFilme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaSerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaSerie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletPesquisa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPesquisa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletSerieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletSerieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/servlets/ServletUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/sql/sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/sql/sql.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/java/br/com/madmaxfilmes/testDadosController/ControllerFIlmes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/testDadosController/ControllerFIlmes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/img/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/atufilme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atufilme.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/atuserie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atuserie.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/cadfilmes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/cadfilmes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/cadserie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/cadserie.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/criaruser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/criaruser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/delfilme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/delfilme.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/js.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/js.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/painel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/painel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/paineladmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/paineladmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/principal/painelexemplo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/painelexemplo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/css/plugins.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/plugins.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/css/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/select2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/erro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/erro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/slick.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/slick.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/slick.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/slick.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/slick.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/slick.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/fonts/slick.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/slick.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/ajax-loader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/fancybox_loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/fancybox_loading.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/fancybox_loading@2x.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/fancybox_loading@2x.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/fancybox_overlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/fancybox_overlay.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/fancybox_sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/fancybox_sprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/fancybox_sprite@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/fancybox_sprite@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/logo1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/close@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/close@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/default.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/loading.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/loading@2x.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/loading@2x.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/next.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/next.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/next@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/next@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/prev.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/prev.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/nivo/prev@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nivo/prev@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/owl.video.play.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/owl.video.play.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/selectimg/select2-spinner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/selectimg/select2-spinner.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/selectimg/select2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/selectimg/select2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/selectimg/select2x2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/selectimg/select2x2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/triangle.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/triangle.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ads1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ads1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ads2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ads2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/author.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/author.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/author2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/author2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/author3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/author3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/author4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/author4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ava1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ava1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ava2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ava2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ava3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ava3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ava4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ava4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blog-detail.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blog-detail.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blog-detail2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blog-detail2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blog-it1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blog-it1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blog-it2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blog-it2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blog26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blog26.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blog27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blog27.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blog29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blog29.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/bloglist-it1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/bloglist-it1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/bloglist-it2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/bloglist-it2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/bloglist-it3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/bloglist-it3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/bloglist-it4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/bloglist-it4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/bloglist-it5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/bloglist-it5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/bloglist-it6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/bloglist-it6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blogv21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blogv21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blogv22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blogv22.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blogv23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blogv23.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blogv24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blogv24.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blogv25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blogv25.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/blogv29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/blogv29.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cast9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cast9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb22.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb23.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb24.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb25.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb26.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb27.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb28.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb29.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceb9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceb9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ceblist8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ceblist8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cebsingle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cebsingle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cebsingle2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cebsingle2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/celeb-hero-single.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/celeb-hero-single.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/celebsingle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/celebsingle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/cm-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/cm-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/drop-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/drop-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/err-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/err-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/error-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/error-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/film8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/film8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/ft-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/ft-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/heart-ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/heart-ico.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/hero-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/hero-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/hero-bg2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/hero-bg2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/hero-bg3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/hero-bg3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image1-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image1-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image101.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image101.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image111.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image111.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image131.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image131.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image141.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image141.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image15.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image151.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image151.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image16.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image161.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image161.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image17.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image171.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image171.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image18.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image181.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image181.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image19.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image191.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image191.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image2-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image2-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image201.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image201.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image211.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image211.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image31.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image41.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image51.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image51.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image61.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image61.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image71.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image71.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image81.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image81.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/image91.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/image91.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/media-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/media-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/media-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/media-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/media-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/media-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/movie-single.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/movie-single.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-it9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-it9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv-item9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv-item9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/mv5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/mv5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/play-btn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/play-btn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/play-vd.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/play-vd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/poster1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/poster1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt15.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/pt9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/pt9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/search-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/search-bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/search-bgsb.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/search-bgsb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/season.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/season.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/series-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/series-img.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/share-ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/share-ico.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/slider-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/slider-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/slider-bg2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/slider-bg2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/slider-rate.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/slider-rate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/slider1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/slider1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/slider2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/slider2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/slider3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/slider3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/slider4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/slider4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/sr-single-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/sr-single-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/sr-single-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/sr-single-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/sr-single-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/sr-single-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/sr-single.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/sr-single.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/topsearch.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/topsearch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/trailer2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/trailer2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/trailer2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/trailer2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/trailer3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/trailer3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/trailer4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/trailer4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/trailer5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/trailer5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/trailer6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/trailer6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/trailer7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/trailer7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/user-hero-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/user-hero-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/user-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/user-img.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/user-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/user-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/userava1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/userava1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/userava2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/userava2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/userava3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/userava3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/userava4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/userava4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/userava5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/userava5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-item8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-item8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-itme1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-itme1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/images/uploads/vd-itme2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/uploads/vd-itme2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/js/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/js/plugins2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/plugins2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/select2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/principal/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/principal/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/head.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/principal/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/principal/navbarpesquisa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/navbarpesquisa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/principal/pesquisa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/pesquisa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/principal/telafilme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/telafilme.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/principal/telaserie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/telaserie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPesquisa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPesquisa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atufilme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atufilme.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atuserie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atuserie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/delfilme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/delfilme.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -418,6 +110,14 @@
       <option name="presentableId" value="Default" />
       <updated>1651066582894</updated>
     </task>
+    <task id="LOCAL-00001" summary="Correçao de Bugs e adcionamento da paginação de pesquisas">
+      <created>1652825754939</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652825754939</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,6 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Correçao de Bugs e adcionamento da paginação de pesquisas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correçao de Bugs e adcionamento da paginação de pesquisas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

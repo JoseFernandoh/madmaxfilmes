@@ -135,11 +135,10 @@
 					</div>
 					<div class="topbar-filter">
 						<label id="totalSerie">Quant. de Serie: 0</label>
-						<div class="pagination2">
-                        	<span>Page 1 of 2:</span>
+						<div style="cursor:default" class="pagination2">
+                        	<span id="quantPagina">Page 1 of 2:</span>
                         	<a class="active" href="#">1</a>
-                        	<a href="">2</a>
-                        	<a onclick="#">
+                        	<a onclick="proximoBut()">
                         		<i class="ion-arrow-right-b"></i>
                         	</a>
                         </div>
@@ -247,7 +246,7 @@
    			var temporadas
         	
         	$("#multselect").select2(); 
-        	$("#atuserie").addClass('active')
+			$("#atuserie").addClass('active')
         	
         	 function buscarSerie(offset) {
         		
@@ -286,11 +285,15 @@
     					    		'</div>');
     		   					}
     		 					
-    		 					var totalFilme = xhr.getResponseHeader("totalSerie");
-
-    		 					document.getElementById("totalSerie").textContent = "Quant. de Serie: " + totalFilme;
-    						}
-    		 				
+								let totalFilme = xhr.getResponseHeader("total");
+								let paginas = xhr.getResponseHeader("paginas");
+								if(paginas != quantidadePaginas){
+									quantidadePaginas = paginas;
+									document.getElementById("quantPagina").textContent = "Page 1 de " + quantidadePaginas + ":"
+									paginar(0,0);	
+								}
+									document.getElementById('totalFilmes').textContent = "Quant. de Filmes: " + totalFilme;
+								}
     		 			}).fail(function(xhr, status, errorThrown) {
     						alert("Erro ao Buscar Usuario por Nome"+ xhr.responseText);
     					});
@@ -527,6 +530,57 @@
     				});
 					
 				}
+
+				function paginar(offset,a) {
+			   	let b = document.querySelector(".pagination2");
+				let s = $(".pagination2 > span");
+			   	s.siblings().remove();
+				   let an;
+				if(a === 0){
+					an = 0;
+				}else{
+					an = parseInt(a.text, 10);
+				}
+				let textPagina;
+				if(quantidadePaginas <= 6){
+						for(let i = an; i < quantidadePaginas; i++){
+							if(i == (0)){
+								b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}else{
+								b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}
+						}
+				}else if(an > (quantidadePaginas-5)){
+					for (let i = (quantidadePaginas-6); i < quantidadePaginas; i++) {
+						if(i == (an-1)){
+							b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+						}else{
+							b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+						}
+					}
+				}else{
+					if(an > 1){
+						for(let i = (an-2); i < (an+2); i++){
+							if(i == (an-1)){
+								b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}else{
+								b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}
+						}
+					}else{	
+						b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (0*5) +",this)\">" + (1) + "</a>");
+						b.innerHTML += ("<a onclick=\"paginar("+ (1*5) +",this)\">" + (2) + "</a>");
+						b.innerHTML += ("<a onclick=\"paginar("+ (2*5) +",this)\">" + (3) + "</a>");
+						b.innerHTML += ("<a onclick=\"paginar("+ (3*5) +",this)\">" + (4) + "</a>");
+					}
+					b.innerHTML += ("<a>...<a/>");
+					for(let i = (quantidadePaginas - 2); i < quantidadePaginas; i++){
+						b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+					}
+				}
+				b.innerHTML += '<a onclick=\"proximoBut()\"> <i class=\"ion-arrow-right-b\"></i></a>';
+				buscarUsuario(offset);
+			}
     		  
     		  	function presionar(offset){
     		  		

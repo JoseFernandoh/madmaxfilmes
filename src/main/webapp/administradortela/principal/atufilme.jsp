@@ -107,11 +107,10 @@
 					</div>
 					<div class="topbar-filter">
 						<label id="totalFilmes">Quant. de Filmes: 0</label>
-						<div class="pagination2">
-                        	<span>Page 1 of 2:</span>
+						<div style="cursor:default" class="pagination2">
+                        	<span id="quantPagina">Page 1 of 2:</span>
                         	<a class="active" href="#">1</a>
-                        	<a href="">2</a>
-                        	<a onclick="#">
+                        	<a onclick="proximoBut()">
                         		<i class="ion-arrow-right-b"></i>
                         	</a>
                         </div>
@@ -127,18 +126,19 @@
         
         <script>
         
-        	var tempo;
-       		var url = '<%= request.getContextPath() %>';
+        	let tempo;
+			let quantidadePaginas;
+       		let url = '<%= request.getContextPath() %>';
         
        		$("#multselect").select2()
        		$("#atufilme").addClass('active')
         	
     		  function buscarUsuario(offset) {
     			  
-    				var urlAction = url+"/ServletPesquisa";
-    		 		var nomeBusca = document.getElementById('nomeBusca').value;
-    		 		var tipo = "Filme";
-    		 		var items = 5;
+    				let urlAction = url+"/ServletPesquisa";
+    		 		let nomeBusca = document.getElementById('nomeBusca').value;
+    		 		let tipo = "Filme";
+    		 		let items = 5;
     		 		
     		 		if(nomeBusca != null & nomeBusca != '' & nomeBusca.trim() != ''){
     		 			$.ajax({
@@ -147,12 +147,12 @@
     		 				data: "nomeBusca=" + nomeBusca + "&tipo=" + tipo + "&items=" + items + "&offset="+ offset +"&acao=buscar",
     		 				success: function(response, textStatus, xhr) {
     		 					
-    		 					var json = JSON.parse(response);
+    		 					let json = JSON.parse(response);
     		 					
-    		 					var el = document.getElementById( 'divdadosFilme' ).remove();
+    		 					let el = document.getElementById( 'divdadosFilme' ).remove();
     		 					$("#tratarFilmeAjax").append('<div id="divdadosFilme"></div>');
     		 					
-    		 					for(var p = 0; p < json.length; p++){
+    		 					for(let p = 0; p < json.length; p++){
     		 						
     		   						$('#divdadosFilme').append('<div class="row">'+
     										'<div class="col-xs-8 col-sm-6">'+
@@ -170,9 +170,14 @@
     					    		'</div>');
     		   					}
     		 					
-    		 					var totalFilme = xhr.getResponseHeader("totalFilme");
-
-    		 					document.getElementById("totalFilmes").textContent = "Quant. de Filmes: " + totalFilme;
+    		 				let totalFilme = xhr.getResponseHeader("total");
+							let paginas = xhr.getResponseHeader("paginas");
+							if(paginas != quantidadePaginas){
+								quantidadePaginas = paginas;
+								document.getElementById("quantPagina").textContent = "Page 1 de " + quantidadePaginas + ":"
+								paginar(0,0);	
+							}
+    		 					document.getElementById('totalFilmes').textContent = "Quant. de Filmes: " + totalFilme;
     						}
     		 				
     		 			}).fail(function(xhr, status, errorThrown) {
@@ -185,7 +190,7 @@
     		  		
     		  		document.querySelector("#close").click();
     		  		
-    		  		var urlAction = url+"/ServletFilmeController";
+    		  		let urlAction = url+"/ServletFilmeController";
     		 		
     		 		$.ajax({
     		 			method: "post",
@@ -193,7 +198,7 @@
     		 			data: "id=" + id +"&acao=buscarfilmeid",
     		 			success: function(response) {
     		 					
-    		 				var json = JSON.parse(response);
+    		 				let json = JSON.parse(response);
     		 					
     		 				$('#id').val(json.id)
     		 				$('#nome').val(json.nome) 
@@ -214,9 +219,62 @@
     				});
     		 		
     		 	}
-    		  		
-				
-    		  
+
+				function proximoBut(){
+					$("a.active").next().click();
+				}
+
+				function paginar(offset,a) {
+			   	let b = document.querySelector(".pagination2");
+				let s = $(".pagination2 > span");
+			   	s.siblings().remove();
+				   let an;
+				if(a === 0){
+					an = 0;
+				}else{
+					an = parseInt(a.text, 10);
+				}
+				let textPagina;
+				if(quantidadePaginas <= 6){
+						for(let i = an; i < quantidadePaginas; i++){
+							if(i == (0)){
+								b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}else{
+								b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}
+						}
+				}else if(an > (quantidadePaginas-5)){
+					for (let i = (quantidadePaginas-6); i < quantidadePaginas; i++) {
+						if(i == (an-1)){
+							b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+						}else{
+							b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+						}
+					}
+				}else{
+					if(an > 1){
+						for(let i = (an-2); i < (an+2); i++){
+							if(i == (an-1)){
+								b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}else{
+								b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+							}
+						}
+					}else{	
+						b.innerHTML += ("<a class=\"active\" onclick=\"paginar("+ (0*5) +",this)\">" + (1) + "</a>");
+						b.innerHTML += ("<a onclick=\"paginar("+ (1*5) +",this)\">" + (2) + "</a>");
+						b.innerHTML += ("<a onclick=\"paginar("+ (2*5) +",this)\">" + (3) + "</a>");
+						b.innerHTML += ("<a onclick=\"paginar("+ (3*5) +",this)\">" + (4) + "</a>");
+					}
+					b.innerHTML += ("<a>...<a/>");
+					for(let i = (quantidadePaginas - 2); i < quantidadePaginas; i++){
+						b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
+					}
+				}
+				b.innerHTML += '<a onclick=\"proximoBut()\"> <i class=\"ion-arrow-right-b\"></i></a>';
+				buscarUsuario(offset);
+			}
+    		  	    		  
     		  	function presionar(offset){
     		  		
     		  		clearInterval(tempo); 

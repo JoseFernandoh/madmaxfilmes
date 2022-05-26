@@ -56,13 +56,13 @@ public class ServletPesquisa extends HttpServlet {
 				ObjectMapper mapper = new ObjectMapper();
 								
 				if(tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Filme")) {
-					
-					int[] dados = daofilme.quantidaadePaginas(items, nome);
-					
-					String json = mapper.writeValueAsString(daofilme.buscarListaNome(nome, items, offset));
-					
-					
-					response.addHeader("total", ""+dados[0]);
+
+						int[] dados = daofilme.quantidaadePaginas(items, nome);
+
+						String json = mapper.writeValueAsString(daofilme.buscarListaNome(nome, items, offset));
+
+
+						response.addHeader("total", ""+dados[0]);
 					response.addHeader("paginas", ""+dados[1]);
 					response.getWriter().write(json);
 				}else if (tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Serie")) {
