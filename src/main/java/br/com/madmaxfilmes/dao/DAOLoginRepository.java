@@ -3,6 +3,7 @@ package br.com.madmaxfilmes.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,6 +121,18 @@ public class DAOLoginRepository {
 		
 		return resultado.getBoolean("admin");		
 	}
+
+	public void mudarSenha(ModelLogin login) throws SQLException {
+		String sql = "update model_login set senha = ? where login = ? ";
+		PreparedStatement stm = connection.prepareStatement(sql);
+
+		stm.setString(1,login.getSenha());
+		stm.setString(2,login.getLogin());
+
+		stm.execute();
+		connection.commit();
+
+	}
 	
 	public int[] quantidaadePaginas(String login) throws Exception {
 
@@ -131,14 +144,14 @@ public class DAOLoginRepository {
 		ResultSet resultado = stm.executeQuery();
 		resultado.next();
 		
-		int totalFilme = Integer.parseInt(resultado.getString("total"));
-		double pagina = totalFilme / 5.0;
+		int total = Integer.parseInt(resultado.getString("total"));
+		double pagina = total / 5.0;
 
 		if ((pagina > 1 ? (pagina % 2) : 0) > 0) {
 			pagina++;
 		}
 
-		return new int[] {totalFilme, (int) pagina};
+		return new int[] {total, (int) pagina};
 	}
 	
 }

@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ServletPaginaSerie extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private DAOSerieRepository dao = new DAOSerieRepository();
+	private final DAOSerieRepository dao = new DAOSerieRepository();
 
     public ServletPaginaSerie() {
    

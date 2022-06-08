@@ -61,7 +61,7 @@
                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-2"><input class="submit" type="submit" value="save"></div>
+                                    <div class="col-md-2"><input class="submit" type="submit" value="Salvar"></div>
 	                                <div class="col-md-3">
 	                                    <input type="button" class="submit" data-toggle="modal" data-target="#pesquisaSerie" value="Pesquisar Serie">
 	                                </div>
@@ -127,7 +127,7 @@
 						</div>
 					</div>
 					<div class="modal-body">
-						<div id="tratarFilmeAjax">
+						<div id="tratarSerieAjax">
 	                    	<div id="divdadosSerie">
 								
 					    	</div>
@@ -136,7 +136,7 @@
 					<div class="topbar-filter">
 						<label id="totalSerie">Quant. de Serie: 0</label>
 						<div style="cursor:default" class="pagination2">
-                        	<span id="quantPagina">Page 1 of 2:</span>
+                        	<span id="quantPagina">Página 1 de 1:</span>
                         	<a class="active" href="#">1</a>
                         	<a onclick="proximoBut()">
                         		<i class="ion-arrow-right-b"></i>
@@ -199,7 +199,7 @@
           				</div>
 					</div>
 					<div class="modal-footer">
-				        <button onclick="adicionarEpisodio()" type="button" class="btn btn-default" data-dismiss="modal">Salve</button>
+				        <button onclick="adicionarEpisodio()" type="button" class="btn btn-default" data-dismiss="modal">Salvar</button>
 					</div>
 				</div>
 				<!-- /.modal-content -->
@@ -221,13 +221,13 @@
 					</div>
 					<div class="modal-body">
           				<div class="form-group">
-            				<label for="recipient-name" class="control-label">UrlVideo:</label>
+            				<label for="recipient-name" class="control-label">Url Video:</label>
             				<input type="hidden" id="atuidEpisodio">
            					<input type="text" class="form-control" id="atualizarurlvideoEpisodios">
           				</div>
 					</div>
 					<div class="modal-footer">
-				        <button onclick="atualizarEpisodio()" type="button" class="btn btn-default" data-dismiss="modal">Salve</button>
+				        <button onclick="atualizarEpisodio()" type="button" class="btn btn-default" data-dismiss="modal">Salvar</button>
 					</div>
 				</div>
 				<!-- /.modal-content -->
@@ -265,7 +265,7 @@
     		 					var json = JSON.parse(response);
     		 					
     		 					var el = document.getElementById( 'divdadosSerie' ).remove();
-    		 					$("#tratarFilmeAjax").append('<div id="divdadosSerie"></div>');
+    		 					$("#tratarSerieAjax").append('<div id="divdadosSerie"></div>');
     		 					
     		 					for(var p = 0; p < json.length; p++){
     		 						
@@ -289,7 +289,7 @@
 								let paginas = xhr.getResponseHeader("paginas");
 								if(paginas != quantidadePaginas){
 									quantidadePaginas = paginas;
-									document.getElementById("quantPagina").textContent = "Page 1 de " + quantidadePaginas + ":"
+									document.getElementById("quantPagina").textContent = "Página 1 de " + quantidadePaginas + ":"
 									paginar(0,0);	
 								}
 									document.getElementById('totalFilmes').textContent = "Quant. de Filmes: " + totalFilme;
@@ -308,6 +308,7 @@
     		 		$.ajax({
     		 			method: "post",
     		 			url: urlAction,
+						async: false,
     		 			data: "id=" + id +"&acao=buscarSerieid",
     		 			success: function(response) {
     		 					
@@ -345,10 +346,10 @@
     		  		
 				function pegarTemporda() {
 					
-					var valor = $('#selectTemporada').val();
-					$("#tabelaEpisodio > tbody > tr").remove();
-					$('#buttaoDeleteTemporada > input').remove();
-					$('#buttaoAdicionarEpisodio > input').remove();
+					var valor = $("#selectTemporada").val();
+					$('#tabelaEpisodio > tbody > tr').remove();
+					$('#inputDeleteTemporada').remove();
+					$('#inputAdicionarEpisodio').remove();
 					
 					if(valor != 0){
 						temporadas = json.temporadas[valor-1];
@@ -363,9 +364,9 @@
 										'<td><input onclick="apagarEpisodio('+ temporadas.episodios[p].id +')" type="button" class="submit" value="Apagar"></td>'+
 									'</tr>');
 						}
-						
-						$('#buttaoDeleteTemporada').append('<input onclick="deletarTemporada('+temporadas.id+')" type="button" class="submit" value="Apagar Temporada">');
-						$('#buttaoAdicionarEpisodio').append('<input type="button" class="submit" data-toggle="modal" data-target="#adiconarEpisodio" value="Adicionar Episodio">');
+						$('#NomeEpisodio').val(temporadas.episodios.length+1);
+						$('#buttaoDeleteTemporada').append('<input id="inputDeleteTemporada" onclick="deletarTemporada('+temporadas.id+')" type="button" class="submit" value="Apagar Temporada">');
+						$('#buttaoAdicionarEpisodio').append('<input id="inputAdicionarEpisodio" type="button" class="submit" data-toggle="modal" data-target="#adiconarEpisodio" value="Adicionar Episodio">');
 						
 					}
 				}
@@ -429,10 +430,10 @@
 				
 				function adicionarEpisodio() {
 					
-					var urlAction = url+"/ServletSerieController";
-					var nome =  $('#NomeEpisodio').val();
-					var urlVideo = $('#urlvideoEpisodios').val();
-					var test = true;
+					let urlAction = url+"/ServletSerieController";
+					let nome =  $('#NomeEpisodio').val();
+					let urlVideo = $('#urlvideoEpisodios').val();
+					let test = true;
 					
 					for(p = 0; p < temporadas.episodios.length; p++){
 						if(nome == temporadas.episodios[p].nome){
@@ -448,12 +449,12 @@
 	    		 			data: "nome=" + nome + "&urlvideo=" + urlVideo + "&idTemporada=" + temporadas.id + "&acao=adicionarEpisodios",
 	    		 			success: function(response) {
 	    		 				
-	    		 				var valor = $('#selectTemporada').val();
+	    		 				let valor = $('#selectTemporada').val();
 	    		 				
 	    		 				editarSerie(json.id);
-	    		 				
-	    		 				$("#selectTemporada").val(valor); 
-	
+
+	    		 				$("#selectTemporada").val(valor);
+
 		    		 			pegarTemporda();
 	    		 			        
 	    					}
@@ -470,7 +471,7 @@
 					
 					var urlAction = url+"/ServletSerieController";
 					
-					if(confirm("deseja realmente deletar a Temporada?")){
+					if(confirm("deseja realmente deletar a Temporada ?")){
 						
 						$.ajax({
 		   		 			method: "post",
@@ -478,11 +479,11 @@
 		   		 			data: "id=" + id + "&acao=deletarEpisodio",
 		   		 			success: function(response) {
 		   		 					
-		   		 			var temp = $("#selectTemporada").val();
+		   		 			let valor = $("#selectTemporada").val();
 		   		 				
 		   		 			editarSerie(json.id);
     		 				
-    		 				$("#selectTemporada").val(temp);  
+    		 				$("#selectTemporada").val(valor);  
     		 				
     		 				pegarTemporda();
 		   		 	       		
@@ -505,9 +506,9 @@
 				
 				function atualizarEpisodio() {
 					
-					var urlVideo = $('#atualizarurlvideoEpisodios').val();
-					var id = $('#atuidEpisodio').val()
-					var urlAction = url+"/ServletSerieController";
+					let urlVideo = $('#atualizarurlvideoEpisodios').val();
+					let id = $('#atuidEpisodio').val()
+					let urlAction = url+"/ServletSerieController";
 					
 					$.ajax({
     		 			method: "post",
@@ -515,11 +516,11 @@
     		 			data: "id=" + id + "&urlvideo=" + urlVideo + "&acao=AtualizarEpisodio",
     		 			success: function(response) {
     		 				
-    		 				var valor = $('#selectTemporada').val();
+    		 				let valor = $('#selectTemporada').val();
     		 				
     		 				editarSerie(json.id);
     		 				
-    		 				$("#selectTemporada").val(valor); 
+							document.getElementById('selectTemporada').value = valor;
 
 	    		 			pegarTemporda();
     		 			        

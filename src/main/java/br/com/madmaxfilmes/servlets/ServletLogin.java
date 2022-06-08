@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private DAOLoginRepository dao = new DAOLoginRepository();
+	private final DAOLoginRepository dao = new DAOLoginRepository();
 
 	public ServletLogin() {
 	}
@@ -23,7 +23,7 @@ public class ServletLogin extends HttpServlet {
 			throws ServletException, IOException {
 		String acao = request.getParameter("acao");
 
-		if (acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("logout")) {
+		if (acao != null && acao.equalsIgnoreCase("logout")) {
 			request.getSession().invalidate();
 			request.getRequestDispatcher("/administradortela/admin.jsp").forward(request, response);
 		} else {
@@ -45,8 +45,7 @@ public class ServletLogin extends HttpServlet {
 					
 					request.getSession().setAttribute("usuario", user.getLogin());
 					request.getSession().setAttribute("admin", dao.validarAdmin(user.getLogin()));
-					request.getRequestDispatcher("/administradortela/principal/paineladmin.jsp").forward(request,
-							response);
+					request.getRequestDispatcher("/administradortela/principal/cadfilmes.jsp").forward(request,response);
 				} else {
 					request.setAttribute("msg", "Informe o login e a senha conrretamente");
 					request.getRequestDispatcher("/administradortela/admin.jsp").forward(request, response);

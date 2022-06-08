@@ -3,6 +3,7 @@ package br.com.madmaxfilmes.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import br.com.madmaxfilmes.model.serie.Temporada;
 
 public class DAOSerieRepository {
 	
-	private Connection connection;
+	private final Connection connection;
 
 	public DAOSerieRepository() {
 		connection = SingleConnectionBanco.getConnection();
@@ -104,6 +105,51 @@ public class DAOSerieRepository {
 		stm.execute();
 		connection.commit();
 	}
+
+	public String deletarSerie(Long id) throws Exception {
+		String sql = "select foto from serie where id = ?";
+
+		PreparedStatement stm = connection.prepareStatement(sql);
+		stm.setLong(1, id);
+
+		ResultSet result = stm.executeQuery();
+		result.next();
+		String path = result.getString("foto");
+
+		deletarTemporadas(id);
+
+		sql = "delete from serie where id = ?";
+
+		stm = connection.prepareStatement(sql);
+		stm.setLong(1, id);
+
+		stm.execute();
+		connection.commit();
+
+		return path;
+	}
+
+	public void deletarTemporadas(Long id_Serie) throws Exception {
+		String sql = "select id from temporada where id_serie = ?";
+
+		PreparedStatement stm = connection.prepareStatement(sql);
+		stm.setLong(1,id_Serie);
+		ResultSet result = stm.executeQuery();
+
+		while (result.next()){
+			long id = result.getLong("id");
+			deletarEpisodio(id);
+		}
+
+		sql = "delete from temporada where id_serie = ?";
+
+		stm = connection.prepareStatement(sql);
+		stm.setLong(1,id_Serie);
+		stm.execute();
+		connection.commit();
+
+
+	}
 	
 	public void deletarTemporada(Long id)throws Exception{
 		
@@ -177,7 +223,7 @@ public class DAOSerieRepository {
 	public List<Temporada> buscarTemporada(Long idSerie) throws Exception{
 		List<Temporada> temporadas = new ArrayList<>();
 		
-		String sql = "select * from temporada where id_serie = ? order by nome";
+		String sql = "select * from temporada where id_serie = ? order by Cast(nome as Integer)";
 		
 		PreparedStatement stm = connection.prepareStatement(sql);
 		stm.setLong(1, idSerie);
@@ -197,7 +243,7 @@ public class DAOSerieRepository {
 	public List<Episodio> buscarEpisodio(Long idtemporada)throws Exception{
 		List<Episodio> episodios = new ArrayList<>();
 		
-		String sql = "select * from episodio where id_temporada = ? order by nome";
+		String sql = "select * from episodio where id_temporada = ? order by Cast(nome as Integer)";
 		
 		PreparedStatement stm = connection.prepareStatement(sql);
 		stm.setLong(1, idtemporada);
@@ -218,7 +264,7 @@ public class DAOSerieRepository {
 	public List<ModelFilme> buscarListaNome(String nomeBusca, Integer limit, Integer offset) throws Exception{
 		
 		List<ModelFilme> retorno = new ArrayList<>();
-		String sql = "select id,nome,foto,sinopse,ano,imdb from serie where upper(nome) like upper(?) order by ano desc offset ? limit ?";
+		String sql = "select id,nome,foto,sinopse,ano,imdb from serie where upper(nome) like upper(?) offset ? limit ?";
 		
 		PreparedStatement stm = connection.prepareStatement(sql);
 		stm.setString(1, "%" + nomeBusca + "%");
@@ -275,14 +321,13 @@ public class DAOSerieRepository {
 		ResultSet resultado = stm.executeQuery();
 		resultado.next();
 		
-		int totalFilme = Integer.parseInt(resultado.getString("total"));
-		double pagina = totalFilme / (double) items;
+		int totalSerie = Integer.parseInt(resultado.getString("total"));
+		double pagina = totalSerie / (double) items;
 
-		if ((pagina > 1 ? (pagina % 2) : 0) > 0) {
+		if ((pagina > 1 ? (pagina % 2) : 0) > 0 || totalSerie < 5 && totalSerie > 0) {
 			pagina++;
 		}
 
-		return new int[] {totalFilme, (int) pagina};
+		return new int[] {totalSerie, (int) pagina };
 	}
-	
 }

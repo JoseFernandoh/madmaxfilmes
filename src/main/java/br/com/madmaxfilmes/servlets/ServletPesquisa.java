@@ -47,7 +47,7 @@ public class ServletPesquisa extends HttpServlet {
 			
 			String acao = request.getParameter("acao");
 						
-			if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscar")){
+			if(acao != null && acao.equalsIgnoreCase("buscar")){
 				
 				String nome = request.getParameter("nomeBusca");
 				String tipo = request.getParameter("tipo");
@@ -55,26 +55,26 @@ public class ServletPesquisa extends HttpServlet {
 				Integer offset = Integer.valueOf(request.getParameter("offset"));
 				ObjectMapper mapper = new ObjectMapper();
 								
-				if(tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Filme")) {
+				if(tipo != null && tipo.equalsIgnoreCase("Filme")) {
 
-						int[] dados = daofilme.quantidaadePaginas(items, nome);
+					int[] dados = daofilme.quantidaadePaginas(items, nome);
 
-						String json = mapper.writeValueAsString(daofilme.buscarListaNome(nome, items, offset));
+					String json = mapper.writeValueAsString(daofilme.buscarListaNome(nome, items, offset));
 
 
-						response.addHeader("total", ""+dados[0]);
-					response.addHeader("paginas", ""+dados[1]);
-					response.getWriter().write(json);
-				}else if (tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Serie")) {
-					int[] dados = daoserie.quantidaadePaginas(items, nome);
-					
-					String json = mapper.writeValueAsString(daoserie.buscarListaNome(nome, items, offset));
-					
 					response.addHeader("total", ""+dados[0]);
 					response.addHeader("paginas", ""+dados[1]);
 					response.getWriter().write(json);
-				
-				}else if (tipo != null && !tipo.isEmpty() && tipo.equalsIgnoreCase("Todos")) {
+
+				}else if (tipo != null && tipo.equalsIgnoreCase("Serie")) {
+					int[] dados = daoserie.quantidaadePaginas(items, nome);
+					
+					String json = mapper.writeValueAsString(daoserie.buscarListaNome(nome, items, offset));
+					response.addHeader("total", ""+dados[0]);
+					response.addHeader("paginas", ""+dados[1]);
+					response.getWriter().write(json);
+
+				}else if (tipo != null && tipo.equalsIgnoreCase("Todos")) {
 					
 					int[] dados = daopesquisa.quantidaadePaginasAll(items, nome);
 					
@@ -94,9 +94,7 @@ public class ServletPesquisa extends HttpServlet {
 			request.setAttribute("msg", e.getMessage());
 			request.getRequestDispatcher(request.getContextPath()+"/erro.jsp").forward(request, response);
 		}
-		
-		
-	
-	}
 
+	}
+	
 }

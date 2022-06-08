@@ -14,7 +14,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;;
+import jakarta.servlet.http.HttpSession;
 
 @WebFilter( urlPatterns = {"/ServletFilmeController","/administradortela/principal/*",
 							"/administradortela/*","/ServletUserController",
@@ -50,7 +50,6 @@ public class FilterAutenticacao implements Filter {
 		if (usuarioLogado == null && !urlParaAutenticar.contains("/administradortela/principal/ServletLogin")) {
 
 			RequestDispatcher redireciona = request.getRequestDispatcher("/administradortela/admin.jsp");
-			request.setAttribute("msg", "Por favor Realise o login");
 			redireciona.forward(request, response);
 			return;
 

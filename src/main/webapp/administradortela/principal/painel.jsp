@@ -28,6 +28,7 @@
                         <div class="user-information">
                             <div class="user-img"><a href="#"><img src="<%= request.getContextPath() %>/images/uploads/user-img.png"
                                         alt=""><br></a><a class="redbtn">${usuario}</a></div>
+                            <!--
                              <div class="user-fav">
                                 <p>Inicio</p>
                                 <ul>
@@ -37,6 +38,15 @@
                                     </c:if>
                                 </ul>	
                             </div>
+                            -->
+                            <c:if test="${admin}">
+                            <div class="user-fav">
+                                <p>Config Usuario</p>
+                                <ul>
+                                    	<li id="criaradmin"><a href="<%= request.getContextPath() %>/administradortela/principal/criaruser.jsp">Criar Administrador</a></li>
+                                </ul>	
+                            </div>
+                            </c:if>
                             <div class="user-fav">
                                 <p>Config. Filmes</p>
                                 <ul>
@@ -50,13 +60,13 @@
                                 <ul>
                                     <li id="cadserie"><a href="<%= request.getContextPath() %>/ServletSerieController?acao=cadserie">Cadastrar Serie</a></li>
                                     <li id="atuserie"><a href="<%= request.getContextPath() %>/ServletSerieController?acao=atuserie">Atualizar Serie</a></li>
-                                    <li><a href="userrate.html">Apagar Serie</a></li>
+                                    <li id="delserie"><a href="<%= request.getContextPath() %>/administradortela/principal/delserie.jsp">Apagar Serie</a></li>
                                 </ul>
                             </div>
                             <div class="user-fav">
                                 <p>Config. Conta</p>
                                 <ul>
-                                    <li><a href="#">Mudar Senha</a></li>
+                                    <li id="altUser"><a href="<%= request.getContextPath() %>/administradortela/principal/altSenhaAdmin.jsp">Mudar Senha</a></li>
                                     <li><a href="<%= request.getContextPath() %>/ServletLogin?acao=logout">Log out</a></li>
                                 </ul>
                             </div>

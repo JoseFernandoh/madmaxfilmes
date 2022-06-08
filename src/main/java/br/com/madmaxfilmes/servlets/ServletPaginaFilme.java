@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ServletPaginaFilme extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private DAOFilmeRepository daofilme = new DAOFilmeRepository();
+	private final DAOFilmeRepository daofilme = new DAOFilmeRepository();
 	
     public ServletPaginaFilme() {
     	

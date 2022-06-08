@@ -54,18 +54,18 @@ public class DAOMediaRepository {
 		String sql = "select count(1) as total from filmes union select count(1) as total from serie ";
 
 		ResultSet resultado = connection.createStatement().executeQuery(sql);
-		int totalFilme = 0;
+		int total = 0;
 		
 		while(resultado.next()) {
-			totalFilme += Integer.parseInt(resultado.getString("total"));
+			total += Integer.parseInt(resultado.getString("total"));
 		}
 		
 		
-		double pagina = totalFilme / (double) items;
-		if ((pagina > 1 ? (pagina % 2) : 0) > 0) {
+		double pagina = total / (double) items;
+		if ((pagina > 1 ? (pagina % 2) : 0) > 0 || total < 5 && total > 0) {
 			pagina++;
 		}
-		return new int[] {totalFilme, (int) pagina};
+		return new int[] {total, (int) pagina};
 	}
 	
 	public int[] quantidaadePaginasAll(int items, String nome) throws Exception {
@@ -86,7 +86,7 @@ public class DAOMediaRepository {
 		}
 
 		double pagina = total / (double) items;
-		if ((pagina > 1 ? (pagina % 2) : 0) > 0) {
+		if ((pagina > 1 ? (pagina % 2) : 0) > 0 || total < 5 && total > 0) {
 			pagina++;
 		}
 		return new int[] {total, (int) pagina};
@@ -98,11 +98,11 @@ public class DAOMediaRepository {
 		String sql = opcao == 1 ? "(select'filme' as tipo, id,nome,foto,imdb,ano from filmes )\n"
 									+ "union \n"
 									+ "(select 'serie' as tipo, id,nome,foto,imdb,ano from serie )\n"
-									+ "order by nome, ano desc limit 15" 
+									+ "order by ano desc limit 15"
 								: "(select'filme' as tipo, id,nome,foto,imdb,ano from filmes )\n"
 									+ "union \n"
 									+ "(select 'serie' as tipo, id,nome,foto,imdb,ano from serie )\n"
-									+ "order by nome, imdb desc limit 15";
+									+ "order by imdb desc limit 15";
 		
 		ResultSet result = connection.createStatement().executeQuery(sql);
 		

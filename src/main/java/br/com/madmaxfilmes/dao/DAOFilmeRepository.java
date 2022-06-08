@@ -197,7 +197,7 @@ public class DAOFilmeRepository {
 	public List<ModelFilme> buscarListaNome(String nomeBusca, Integer limit, Integer offset) throws Exception{
 		
 		List<ModelFilme> retorno = new ArrayList<>();
-		String sql = "select id,nome,foto,sinopse,ano,imdb from filmes where upper(nome) like upper(?) order by ano desc offset ? limit ?";
+		String sql = "select id,nome,foto,sinopse,ano,imdb from filmes where upper(nome) like upper(?) offset ? limit ?";
 		
 		PreparedStatement stm = connection.prepareStatement(sql);
 		stm.setString(1, "%" + nomeBusca + "%");
@@ -235,7 +235,7 @@ public class DAOFilmeRepository {
 		int totalFilme = Integer.parseInt(resultado.getString("total"));
 		double pagina = totalFilme / (double) items;
 
-		if (pagina % 2 > 0) {
+		if ((pagina > 1 ? (pagina % 2) : 0) > 0 || totalFilme < 5 && totalFilme > 0) {
 			pagina++;
 		}
 

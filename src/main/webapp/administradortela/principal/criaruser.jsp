@@ -18,7 +18,7 @@
                                 <input type="hidden" name="acao" id="acao" value="cadastrarAdmin">
                                 <div class="row">
                                     <div class="col-md-6 form-it">
-                                    	<label>Login: </label>
+                                    	<label>Usuário: </label>
                                     	<input name="login" id="login" type="text" required>
                                    </div>
                                    <div class="col-md-6 form-it">
@@ -27,7 +27,7 @@
                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-2"><input class="submit" type="submit" value="save"></div>
+                                    <div class="col-md-2"><input class="submit" type="submit" value="Salvar"></div>
                                 </div>
                             </form>
                         </div>
@@ -106,9 +106,8 @@
 	   		 					$('#tratarLoginAjax').append('<div id="topdarfilter" class="topbar-filter">'+
 				                    	'<label id="totalLogins"></label>'+
 					                    '<div class="pagination2">'+
-	                        				'<span>Page 1 of 2:</span>'+
+	                        				'<span>Pagina 1 de 1:</span>'+
 	                        				'<a class="active" href="#">1</a>'+
-	                        				'<a href="#">2</a>'+
 	                        				'<a onclick="#">'+
 	                        					'<i class="ion-arrow-right-b"></i>'+
 	                        				'</a>'+

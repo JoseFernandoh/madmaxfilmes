@@ -27,8 +27,8 @@
 	                                            <p><i class="ion-android-star"></i><span>${sl1.imdb}</span>/10</p>
 	                                        </div>
 	                                        <div class="btn-transform transform-vertical">
-	                                            <div><a href="<%= request.getContextPath() %>${sl1.linkPagina}" class="item item-1 redbtn">more detail</a></div>
-	                                            <div><a href="<%= request.getContextPath() %>${sl1.linkPagina}" class="item item-2 redbtn hvrbtn">more detail</a></div>
+	                                            <div><a href="<%= request.getContextPath() %>${sl1.linkPagina}" class="item item-1 redbtn">Ver Mais</a></div>
+	                                            <div><a href="<%= request.getContextPath() %>${sl1.linkPagina}" class="item item-2 redbtn hvrbtn">Ver Mais</a></div>
 	                                        </div>
 	                                    </div>
 	                                </div>
@@ -47,13 +47,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="title-hd">
-                    <h2>Lançamentos</h2><a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+                    <h2>Lançamentos</h2>
                 </div>
                 <div class="tabs">
                     <ul class="tab-links">
                         <li class="active"><a href="#tab2-h2">#Todos</a></li>
                         <li><a href="#tab3-h2"> #Filmes</a></li>
-                        <li><a href="#tab4-h2">#Sere</a></li>
+                        <li><a href="#tab4-h2">#Séries</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab2-h2"  class="tab active">
@@ -63,7 +63,7 @@
 	                                    <div class="slide-it">
 	                                        <div class="movie-item">
 	                                            <div class="mv-img"><img src="<%= request.getContextPath() %>/${aux.foto}" alt=""></div>
-	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Read more <i
+	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Ver Mais <i
 	                                                        class="ion-android-arrow-dropright"></i></a></div>
 	                                            <div class="title-in">
 	                                                <h6><a href="#">${aux.nome}</a></h6>
@@ -82,7 +82,7 @@
 	                                    <div class="slide-it">
 	                                        <div class="movie-item">
 	                                            <div class="mv-img"><img src="<%= request.getContextPath() %>/${aux.foto}" alt=""></div>
-	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Read more <i
+	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Ver Mais <i
 	                                                        class="ion-android-arrow-dropright"></i></a></div>
 	                                            <div class="title-in">
 	                                                <h6><a href="#">${aux.nome}</a></h6>
@@ -101,7 +101,7 @@
 	                                    <div class="slide-it">
 	                                        <div class="movie-item">
 	                                            <div class="mv-img"><img src="<%= request.getContextPath() %>/${aux.foto}" alt=""></div>
-	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Read more <i
+	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Ver Mais <i
 	                                                        class="ion-android-arrow-dropright"></i></a></div>
 	                                            <div class="title-in">
 	                                                <h6><a href="#">${aux.nome}</a></h6>
@@ -116,13 +116,13 @@
                     </div>
                 </div>
                 <div class="title-hd">
-                    <h2>Melhores Notas</h2><a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+                    <h2>Melhores Notas</h2>
                 </div>
                 <div class="tabs">
                     <ul class="tab-links-2">
                         <li class="active"><a href="#tab21-h2">#Todos</a></li>
                         <li><a href="#tab22-h2">#Filmes</a></li>
-                        <li><a href="#tab23-h2"> #Series</a></li>
+                        <li><a href="#tab23-h2"> #Séries</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab21-h2" class="tab active">
@@ -132,7 +132,7 @@
 	                                    <div class="slide-it">
 	                                        <div class="movie-item">
 	                                            <div class="mv-img"><img src="<%= request.getContextPath() %>/${aux.foto}" alt=""></div>
-	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Read more <i
+	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Ver Mais <i
 	                                                        class="ion-android-arrow-dropright"></i></a></div>
 	                                            <div class="title-in">
 	                                                <h6><a href="#">${aux.nome}</a></h6>
@@ -151,7 +151,7 @@
 	                                    <div class="slide-it">
 	                                        <div class="movie-item">
 	                                            <div class="mv-img"><img src="<%= request.getContextPath() %>/${aux.foto}" alt=""></div>
-	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Read more <i
+	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Ver Mais <i
 	                                                        class="ion-android-arrow-dropright"></i></a></div>
 	                                            <div class="title-in">
 	                                                <h6><a href="#">${aux.nome}</a></h6>
@@ -170,7 +170,7 @@
 	                                    <div class="slide-it">
 	                                        <div class="movie-item">
 	                                            <div class="mv-img"><img src="<%= request.getContextPath() %>/${aux.foto}" alt=""></div>
-	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Read more <i
+	                                            <div class="hvr-inner"><a href="<%= request.getContextPath() %>${aux.linkPagina}">Ver Mais <i
 	                                                        class="ion-android-arrow-dropright"></i></a></div>
 	                                            <div class="title-in">
 	                                                <h6><a href="#">${aux.nome}</a></h6>

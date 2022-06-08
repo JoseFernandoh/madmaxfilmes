@@ -13,7 +13,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,10 +33,10 @@ public class ServletFilmeController extends HttpServlet {
 		String acao = request.getParameter("acao");
 		request.setAttribute("categorias", ModelCategorias.values());
 		
-		if(acao != null && !acao.isEmpty() && acao.equals("cadfilme")) {
+		if(acao != null && acao.equals("cadfilme")) {
 			request.getRequestDispatcher("/administradortela/principal/cadfilmes.jsp").forward(request, response);
 
-		}else if(acao != null && !acao.isEmpty() && acao.equals("atufilme")) {
+		}else if(acao != null && acao.equals("atufilme")) {
 			request.getRequestDispatcher("/administradortela/principal/atufilme.jsp").forward(request, response);
 
 		}else {
@@ -51,7 +50,7 @@ public class ServletFilmeController extends HttpServlet {
 
 			String acao = request.getParameter("acao");
 
-			if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("cadastrarfilme")) {
+			if(acao != null && acao.equalsIgnoreCase("cadastrarfilme")) {
 
 					String nome = request.getParameter("nome");
 					String time = request.getParameter("tempo");
@@ -80,7 +79,7 @@ public class ServletFilmeController extends HttpServlet {
 				request.setAttribute("msg", " Filme Cadastrado com Sucesso");
 				request.getRequestDispatcher("/administradortela/principal/cadfilmes.jsp").forward(request, response);
 
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("atualizarfilme")) {
+			}else if(acao != null && acao.equalsIgnoreCase("atualizarfilme")) {
 
 				Long id = Long.valueOf(request.getParameter("id"));
 				String nome = request.getParameter("nome");
@@ -115,14 +114,14 @@ public class ServletFilmeController extends HttpServlet {
 				request.setAttribute("categorias", ModelCategorias.values());
 				request.getRequestDispatcher("/administradortela/principal/atufilme.jsp").forward(request, response);
 
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscarfilmeid")) {
+			}else if(acao != null && acao.equalsIgnoreCase("buscarfilmeid")) {
 				ModelFilme filme = daofilme.buscarFilmeId(Long.valueOf(request.getParameter("id")));
 
 				ObjectMapper mapper = new ObjectMapper();
 				String json = mapper.writeValueAsString(filme);
 
 				response.getWriter().write(json);
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("deletarfilmeid")) {
+			}else if(acao != null && acao.equalsIgnoreCase("deletarfilmeid")) {
 
 				String foto = daofilme.deletarFilme(Long.valueOf(request.getParameter("id")));
 

@@ -13,7 +13,7 @@
 	
     				<div class="col-md-9 col-sm-12 col-xs-12">
                         <div class="form-style-1 user-pro">
-                               <h4>Deletar Filme</h4>
+                               <h4>Deletar Serie</h4>
                                <p id="msg">${msg}</p>
                                <div class="row">
                                 	<div class="col-xs-12 .col-md-8">
@@ -24,14 +24,14 @@
 										</div>
 									</div>
 								</div>
-							<div style="padding-top: 5%;" id="tratarFilmeAjax">
-								<div id="divdadosFilme">
+							<div style="padding-top: 5%;" id="tratarSerieAjax">
+								<div id="divdadosSerie">
 									
 								</div>
 							</div>
                         </div>
 							<div class="topbar-filter">
-							<label id="totalFilmes">Quant. de Filmes: 0</label>
+							<label id="totalSerie">Quant. de Series: 0</label>
 							<div style="cursor:default" class="pagination2">
 								<span id="quantPagina">Página 1 de 1:</span>
 								<a class="active" href="#">1</a>
@@ -53,14 +53,13 @@
 			let quantidadePaginas;
 	   		let url = '<%= request.getContextPath() %>';
         
-        	$("#multselect").select2();
-        	$("#delfilme").addClass('active')
+        	$("#delserie").addClass('active')
         	
         	function buscarUsuario(offset) {
     			  
    				let urlAction = url+"/ServletPesquisa";
    		 		let nomeBusca = document.getElementById('nomeBusca').value;
-   		 		let tipo = "Filme";
+   		 		let tipo = "Serie";
    		 		let items = 5;
    		 		
    		 		if(nomeBusca != null & nomeBusca != '' & nomeBusca.trim() != ''){
@@ -71,14 +70,13 @@
    		 				success: function(response, textStatus, xhr) {
    		 					
    		 					let json = JSON.parse(response);
-   		 					
-   		 					$('#divdadosFilme').remove();
+   		 					$('#divdadosSerie').remove();
    		 					$('#topdarfilter').remove();
-   		 					$("#tratarFilmeAjax").append('<div id="divdadosFilme"></div>');
+   		 					$("#tratarSerieAjax").append('<div id="divdadosSerie"></div>');
    		 					
    		 					for(let p = 0; p < json.length; p++){
    		 						
-   		   						$('#divdadosFilme').append('<div class="row">'+
+   		   						$('#divdadosSerie').append('<div class="row">'+
    										'<div class="col-xs-8 col-sm-6">'+
    										'<div class="movie-item-style-2">'+
    					                    	'<img style=" width: 80px;height: 120px;" src="'+url+'/'+json[p].foto+'" alt="">'+
@@ -101,39 +99,35 @@
 								document.getElementById("quantPagina").textContent = "Página 1 de " + quantidadePaginas + ":";
 								paginar(0,0);	
 							}
-    		 					document.getElementById('totalFilmes').textContent = "Quant. de Filmes: " + totalFilme;
-   		 					}
+    		 				document.getElementById('totalSerie').textContent = "Quant. de Serie: " + totalFilme;
+						}
    		 			}).fail(function(xhr, status, errorThrown) {
-   						alert("Erro ao Buscar Filme por Nome"+ xhr.responseText);
+   						alert("Erro ao Buscar Serie por Nome"+ xhr.responseText);
    					});
    		 		}
    			}
         	
         	function deletarFilme(id) {
-        		let urlAction = url+"/ServletFilmeController";
+        		let urlAction = url+"/ServletPaginaSerie";
         		
-        		if(confirm("deseja realmente deletar o Filme?")){
+        		if(confirm("deseja realmente deletar a Serie?")){
 			 		$.ajax({
 			 			method: "post",
 			 			url: urlAction,
-			 			data: "id=" + id +"&acao=deletarfilmeid",
+			 			data: "id=" + id +"&acao=deletarSerieid",
 			 			success: function(response) {
 			 					
-			 				document.getElementById("msg").textContent = "Filme Apagado com sucesso"
+			 				document.getElementById("msg").textContent = "Serie Apagado com sucesso"
 			 				buscarUsuario(0);
 			 	       		
 						}
 			 				
 			 		}).fail(function(xhr, status, errorThrown) {
-							alert("Erro ao Deletar o filme"+ xhr.responseText);
+							alert("Erro ao Deletar o Serie"+ xhr.responseText);
 					});
         		}
 		 		
 			}
-
-            function proximoBut(){
-                $("a.active").next().click();
-            }
 
 			function paginar(offset,a) {
 			   	let b = document.querySelector(".pagination2");

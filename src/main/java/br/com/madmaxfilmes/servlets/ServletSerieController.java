@@ -1,16 +1,9 @@
 package br.com.madmaxfilmes.servlets;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import br.com.madmaxfilmes.dao.DAOSerieRepository;
 import br.com.madmaxfilmes.model.ModelCategorias;
 import br.com.madmaxfilmes.model.ModelSerie;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -19,12 +12,17 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 @MultipartConfig
 @WebServlet("/ServletSerieController")
 public class ServletSerieController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private DAOSerieRepository dao = new DAOSerieRepository();
+	private final DAOSerieRepository dao = new DAOSerieRepository();
 	
     public ServletSerieController() {
     
@@ -34,10 +32,10 @@ public class ServletSerieController extends HttpServlet {
 		String acao = request.getParameter("acao");
 		request.setAttribute("categorias", ModelCategorias.values());
 		
-		if(acao != null && !acao.isEmpty() && acao.equals("cadserie")) {
+		if(acao != null && acao.equals("cadserie")) {
 			request.getRequestDispatcher("/administradortela/principal/cadserie.jsp").forward(request, response);
 
-		}else if(acao != null && !acao.isEmpty() && acao.equals("atuserie")) {
+		}else if(acao != null && acao.equals("atuserie")) {
 			request.getRequestDispatcher("/administradortela/principal/atuserie.jsp").forward(request, response);
 
 		}else {
@@ -51,7 +49,7 @@ public class ServletSerieController extends HttpServlet {
 			
 			String acao = request.getParameter("acao");
 			
-			if(acao != null && !acao.isEmpty() && acao.equals("cadastrarserie")) {
+			if(acao != null && acao.equals("cadastrarserie")) {
 					
 				String nome = request.getParameter("nome");
 				String time = request.getParameter("tempo");
@@ -80,7 +78,7 @@ public class ServletSerieController extends HttpServlet {
 				request.setAttribute("categorias", ModelCategorias.values());
 				request.getRequestDispatcher("/administradortela/principal/cadserie.jsp").forward(request, response);
 			
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("atualizarserie")) {
+			}else if(acao != null && acao.equalsIgnoreCase("atualizarserie")) {
 				
 				Long id = Long.valueOf(request.getParameter("id"));
 				String nome = request.getParameter("nome");
@@ -114,21 +112,21 @@ public class ServletSerieController extends HttpServlet {
 				request.setAttribute("categorias", ModelCategorias.values());
 				request.getRequestDispatcher("/administradortela/principal/atuserie.jsp").forward(request, response);
 				
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscarSerieid")) {
+			}else if(acao != null && acao.equalsIgnoreCase("buscarSerieid")) {
 				
 				ObjectMapper mapper = new ObjectMapper();
 				String json = mapper.writeValueAsString(dao.buscarSerieId(Long.valueOf(request.getParameter("id"))));
 				
 				response.getWriter().write(json);
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("criarTemporada")) {
+			}else if(acao != null && acao.equalsIgnoreCase("criarTemporada")) {
 				
 				dao.criarTemporada(request.getParameter("nome"), Long.valueOf(request.getParameter("idSerie")));
 				
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("deletarTemporda")) {
+			}else if(acao != null && acao.equalsIgnoreCase("deletarTemporda")) {
 				
 				dao.deletarTemporada(Long.valueOf(request.getParameter("id")));
 				
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("adicionarEpisodios")) {
+			}else if(acao != null && acao.equalsIgnoreCase("adicionarEpisodios")) {
 				
 				String nome = request.getParameter("nome");
 				String urlVideo = request.getParameter("urlvideo");
@@ -136,14 +134,21 @@ public class ServletSerieController extends HttpServlet {
 				
 				dao.adicionarEpisodio(nome, urlVideo, idTemporada);
 				
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("deletarEpisodio")) {
+			}else if(acao != null && acao.equalsIgnoreCase("deletarEpisodio")) {
 				
 				dao.deletarEpisodioid(Long.valueOf(request.getParameter("id")));
 				
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("AtualizarEpisodio")) {
+			}else if(acao != null && acao.equalsIgnoreCase("AtualizarEpisodio")) {
 				
 				dao.atualizarEpisodio(request.getParameter("urlvideo"), Long.valueOf(request.getParameter("id")));
 				
+			}else if(acao != null && acao.equalsIgnoreCase("deletarfilmeid")) {
+
+				String foto = dao.deletarSerie(Long.valueOf(request.getParameter("id")));
+
+				File file = new File(request.getServletContext().getRealPath(foto));
+				file.delete();
+
 			}
 		
 		}catch (Exception e) {

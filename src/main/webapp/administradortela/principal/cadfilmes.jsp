@@ -67,7 +67,7 @@
                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-2"><input class="submit" type="submit" value="save"></div>
+                                    <div class="col-md-2"><input class="submit" type="submit" value="Salvar"></div>
                                 </div>
                             </form>
                         </div>

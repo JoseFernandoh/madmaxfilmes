@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 
 public class SingleConnectionBanco {
 
-		private static String url = "jdbc:postgresql://127.0.0.1:5433/madmaxfilmes?autoReconnect=true";
-		private static String user = "postgres";
-		private static String pass =  "admin";
+		private static final String url = "jdbc:postgresql://127.0.0.1:5433/madmaxfilmes?autoReconnect=true";
+		private static final String user = "postgres";
+		private static final String pass =  "admin";
 		private static Connection connection = null;
 		
 		static {

@@ -13,9 +13,9 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ServletHome extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private DAOFilmeRepository daofilme = new DAOFilmeRepository();
-	private DAOSerieRepository daoserie = new DAOSerieRepository();
-	private DAOMediaRepository daomidia = new DAOMediaRepository();
+	private final DAOFilmeRepository daofilme = new DAOFilmeRepository();
+	private final DAOSerieRepository daoserie = new DAOSerieRepository();
+	private final DAOMediaRepository daomidia = new DAOMediaRepository();
 
 	public ServletHome() {
     }

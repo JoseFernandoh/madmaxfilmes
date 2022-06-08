@@ -14,7 +14,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header logo">
                         <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only">Alternar de navegação</span>
                             <div id="nav-icon1"><span></span><span></span><span></span></div>
                         </div><a href="<%= request.getContextPath() %>/index.html"><img class="logo" src="<%= request.getContextPath() %>/images/logo1.png" alt="" width="119"
                                 height="58"></a>
@@ -35,7 +35,7 @@
 	           		<option value="Filme">Filme</option>
 	           		<option value="Serie">Serie</option>
 	           	</select>
-	           	<input onkeyup="presionar(0)" id="nomeBusca" name="nomeBusca" type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+	           	<input onkeyup="presionar(0)" id="nomeBusca" name="nomeBusca" type="text" placeholder="Procurar rapidamente um filme ou serie que você deseja">
             </div>
         </div>
     </header>

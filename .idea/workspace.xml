@@ -4,20 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c12185e6-2019-4704-9183-5801d7ee9f0d" name="Changes" comment="Correçao de Bugs e adcionamento da paginação de pesquisas">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/img/1.jpg" afterDir="false" />
+    <list default="true" id="c12185e6-2019-4704-9183-5801d7ee9f0d" name="Changes" comment="Correçao de Bugs">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/altSenhaAdmin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/delserie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/.settings/.jsdtscope" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/home/deku/Documentos/JAVA/Eclipse Web/madmaxfilmes/target/m2e-wtp/web-resources/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/home/deku/Documentos/JAVA/Eclipse Web/madmaxfilmes/target/m2e-wtp/web-resources/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/madmaxfilmes/src/main/webapp/administradortela/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/connection/SingleConnectionBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/connection/SingleConnectionBanco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOFilmeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOFilmeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOLoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOLoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOMediaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOMediaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOSerieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/dao/DAOSerieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/filter/FilterAutenticacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/filter/FilterAutenticacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletFilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletFilmeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaFilme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaFilme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaSerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPaginaSerie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPesquisa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletPesquisa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletSerieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletSerieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/servlets/ServletUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/madmaxfilmes/testDadosController/ControllerFIlmes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/img/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atufilme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atufilme.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atuserie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/atuserie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/cadfilmes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/cadfilmes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/cadserie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/cadserie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/criaruser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/criaruser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/delfilme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/delfilme.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/painel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administradortela/principal/painel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/principal/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/principal/navbarpesquisa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/navbarpesquisa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/principal/pesquisa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal/pesquisa.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +70,17 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../apiADDFilMadmaxfilme" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\T-Gamer\IdeaProjects\madmaxfilmes\src\main\webapp" />
+      <recent name="C:\Users\T-Gamer\IdeaProjects\madmaxfilmes\src\main\webapp\administradortela\principal" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\T-Gamer\IdeaProjects\madmaxfilmes" />
     </key>
@@ -117,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652825754939</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Correçao de Bugs">
+      <created>1653523781321</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653523781321</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +168,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Correçao de Bugs e adcionamento da paginação de pesquisas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correçao de Bugs e adcionamento da paginação de pesquisas" />
+    <MESSAGE value="Correçao de Bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correçao de Bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

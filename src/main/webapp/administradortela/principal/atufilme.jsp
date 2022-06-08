@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-2">
-                                    	<input class="submit" type="submit" value="save">
+                                    	<input class="submit" type="submit" value="Salvar">
                                     </div>
                                     <div class="col-md-3">
                                     	<input type="button" class="submit" data-toggle="modal" data-target="#pesquisafilme" value="Pesquisar Filme">
@@ -108,7 +108,7 @@
 					<div class="topbar-filter">
 						<label id="totalFilmes">Quant. de Filmes: 0</label>
 						<div style="cursor:default" class="pagination2">
-                        	<span id="quantPagina">Page 1 of 2:</span>
+                        	<span id="quantPagina">Página 1 de 1:</span>
                         	<a class="active" href="#">1</a>
                         	<a onclick="proximoBut()">
                         		<i class="ion-arrow-right-b"></i>
@@ -174,7 +174,7 @@
 							let paginas = xhr.getResponseHeader("paginas");
 							if(paginas != quantidadePaginas){
 								quantidadePaginas = paginas;
-								document.getElementById("quantPagina").textContent = "Page 1 de " + quantidadePaginas + ":"
+								document.getElementById("quantPagina").textContent = "Página 1 de " + quantidadePaginas + ":"
 								paginar(0,0);	
 							}
     		 					document.getElementById('totalFilmes').textContent = "Quant. de Filmes: " + totalFilme;

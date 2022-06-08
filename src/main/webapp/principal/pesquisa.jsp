@@ -18,7 +18,7 @@
             <div class="row ipad-width2">
                 <div class="col-md-10 col-sm-12 col-xs-12">
                     <div class="topbar-filter">
-                        <p>Found <span id="total">${total} movies</span> in total</p>
+                        <p>Foram encontrados <span id="total">${total} </span> no total</p>
                     </div>
                     <div id="tratarFilmeAjax">
 	                    <div id="divdadosFilme">
@@ -35,13 +35,13 @@
 	                    </div>
                     </div>
                     <div class="topbar-filter">
-                    	<label>Movies per page:</label>
+                    	<label>Quant. por Página:</label>
                     	<select onclick="mudarQuantFilme()" id = "selectitem">
-                    		<option value="5">5 Movies</option>
-                    		<option value="10">10 Movies</option>
+                    		<option value="5">5</option>
+                    		<option value="10">10</option>
                     	</select>
                         <div style="cursor:default" class="pagination2">
-                        	<span id="quantPagina">Page 1 de ${paginas}:</span>
+                        	<span id="quantPagina">Página 1 de ${paginas}:</span>
                         	<a	 class="active" onclick="paginar(0,this)">1</a>
                         	<%
                         		int paginas = (int) request.getAttribute("paginas");
@@ -108,7 +108,7 @@
 						let paginas = xhr.getResponseHeader("paginas");
 						if(paginas != quantidadePaginas){
 							quantidadePaginas = paginas;
-							document.getElementById("quantPagina").textContent = "Page 1 de " + quantidadePaginas + ":"
+							document.getElementById("quantPagina").textContent = "Página 1 de " + quantidadePaginas + ":"
 							paginar(0,0);
 						}
 
@@ -173,6 +173,7 @@
 						b.innerHTML += ("<a onclick=\"paginar("+ (i*5) +",this)\">" + (i+1) + "</a>");
 					}
 				}
+				document.getElementById("quantPagina").textContent = "Página " + ((offset/5)+1) + " de " + quantidadePaginas + ":"
 				b.innerHTML += '<a onclick=\"proximoBut()\"> <i class=\"ion-arrow-right-b\"></i></a>';
 				buscarUsuario(offset);
 			}

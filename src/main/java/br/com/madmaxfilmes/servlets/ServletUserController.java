@@ -32,7 +32,7 @@ public class ServletUserController extends HttpServlet {
 			
 			String acao = request.getParameter("acao");
 			
-			if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("cadastrarAdmin")) {
+			if(acao != null && acao.equalsIgnoreCase("cadastrarAdmin")) {
 				
 				String login = request.getParameter("login");
 				String senha = request.getParameter("senha");
@@ -44,7 +44,7 @@ public class ServletUserController extends HttpServlet {
 
 				request.getRequestDispatcher("/administradortela/principal/criaruser.jsp").forward(request, response);
 				
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscarlogin")) {
+			}else if(acao != null && acao.equalsIgnoreCase("buscarlogin")) {
 				String nome = request.getParameter("nomeBusca");
 				int offset = Integer.parseInt(request.getParameter("offset"));
 				
@@ -58,12 +58,24 @@ public class ServletUserController extends HttpServlet {
 				response.addHeader("totalPagina", dados[1]+"");
 				response.getWriter().write(json);
 				
-			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("deletaruserid")) {
+			}else if(acao != null && acao.equalsIgnoreCase("deletaruserid")) {
 				
 				dao.deleteUser(Long.valueOf(request.getParameter("id")));
 				
+			}else if(acao != null && acao.equalsIgnoreCase("atualizarSenhaUser")){
+				String user = request.getParameter("user");
+				String senhaAtual = request.getParameter("SenhaAtual");
+				String senhaNova = request.getParameter("novaSenha");
+
+				if(dao.validarAutenticacao(new ModelLogin(user,senhaAtual))){
+					dao.mudarSenha(new ModelLogin(user,senhaNova));
+					request.setAttribute("msg", "Senha Atualizada com Sucesso");
+				}else{
+					request.setAttribute("msg", "Senha atual Errada");
+				}
+				request.getRequestDispatcher("/administradortela/principal/altSenhaAdmin.jsp").forward(request, response);
 			}
-			
+
 		}catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("msg", e.getMessage());

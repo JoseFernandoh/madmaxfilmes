@@ -10,16 +10,18 @@
 	  <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	
-	<title>Curso jsp</title>
+	<title>MadMaxFilme</title>
 	
 	<style type="text/css">
 	
-		 .tela{	
+		.tela{	
 		 	background-color: white;
 			width: 450px;
 			padding: 70px 80px 70px 80px;
-			border-radius: 15px;
-			box-shadow: 8px 8px 8px 3px;
+			border-radius: 15px;	
+			font-family: 'Dosis', sans-serif;
+			font-size: 14px;
+			color: #222222;
 		}
 		.btn{
 			width: 210px;
@@ -38,7 +40,7 @@
     		border-radius: 5px;
 		}
 		body{
-			background-image: url(<%= request.getContextPath() %>/administradortela/img/1.jpg);
+			background-image: url(<%= request.getContextPath() %>/images/uploads/slider-bg2.jpg);
 		    background-repeat: no-repeat;
 		    background-attachment: fixed;
 		    background-position: center;
